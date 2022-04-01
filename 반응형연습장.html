@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지각생의 웹세상</title>
+
+  <style>
+    #page {
+      padding: 10px;
+      width: 800px;
+      margin: 50px auto;
+    }
+
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 50px;
+      width: 100%;
+    }
+
+    #main {
+
+      width: 100%;
+      float: left;
+    }
+
+    #sidebar {
+      position: fixed;
+      top: 50;
+      right: 50px;
+      width: 300px;
+      height: 150px;
+    }
+
+    #footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: 42px;
+      width: 100%;
+
+    }
+
+    @media screen and (max-width:980px) {
+      #page {
+        width: 94%;
+      }
+
+      #header {
+        width: 100%;
+      }
+
+      #main {
+        width: 99.8%;
+      }
+
+      #sidebar {
+        width: 12%;
+      }
+    }
+
+    @media screen and (max-width:700px) {
+      #main {
+        width: auto;
+        float: none;
+      }
+
+      #sidebar {
+        width: 12%;
+      }
+    }
+
+    @media screen and (max-width:480px) {
+      #header {
+        height: auto;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      #sidebar {
+        display: none;
+      }
+    }
+
+    #header,
+    #main,
+    #sidebar,
+    #footer {
+      border: solid 1px red;
+    }
+
+    #header {
+      background-color: yellow;
+    }
+
+    #sidebar {
+      background-color: aliceblue;
+    }
+
+    #main {
+      background-color: aqua;
+    }
+
+    #footer {
+      background-color: coral;
+    }
+
+    pre {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    table {
+      text-align: center;
+    }
+
+
+
+    .font_footer {
+      font-size: 20pt;
+      font-family: 'Courier New', Courier, monospace qwertyuiopasdfghjklzxcvbnm;
+    }
+  </style>
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+  <div id="page">
+    <div id="header">
+      <h1><a href="00_index.html">지각생의 웹세상. </a>
+        <h3> 여기는</h3>
+        <h2> 연습장 </h2>
+    </div>
+
+
+
+    <div id="main">
+
+
+    </div>
+    <div id="sidebar">
+      <h2>Sidebar</h2>
+      <ul>
+        <li>Fluid Grids</li>
+        <li>Media Queries</li>
+      </ul>
+    </div>
+
+    <div id="footer">
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+</body>
+
+</html>

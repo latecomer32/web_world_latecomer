@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <script>
+    function calc() {
+      var x = document.myform.x.value;
+      var y = document.myform.y.value;
+      var sum;
+
+      sum = parseInt(x) + parseInt(y);
+      document.myform.sum.value = sum;
+    }
+  </script>
+</head>
+
+<body>
+  <h3>덧셈 계산기</h3>
+  <form name="myform" action="#" method="post">
+    첫번째 정수: <input type="text" name="x" /><br />
+    두번째 정수: <input type="text" name="y" /><br />
+    합계: <input type="text" name="sum" /><br />
+    <input type="button" value="계산" onclick="calc();" />
+  </form>
+
+
+  <pre>
+    &lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Calculator&lt;/title&gt;
+  &lt;script&gt;
+    function calc() {
+      var x = document.myform.x.value;
+      var y = document.myform.y.value;
+      var sum;
+
+      sum = parseInt(x) + parseInt(y);
+      document.myform.sum.value = sum;
+    }
+  &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h3&gt;덧셈 계산기&lt;/h3&gt;
+  &lt;form name="myform" action="#" method="post"&gt;
+    첫번째 정수: &lt;input type="text" name="x" /&gt;&lt;br /&gt;
+    두번째 정수: &lt;input type="text" name="y" /&gt;&lt;br /&gt;
+    합계: &lt;input type="text" name="sum" /&gt;&lt;br /&gt;
+    &lt;input type="button" value="계산" onclick="calc();" /&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+</body>
+
+</html>

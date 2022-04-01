@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>form 태그</title>
+       <style>
+              pre {
+                     font-family: "맑은 고딕";
+              }
+       </style>
+</head>
+
+<body>
+       <form action="input.jsp" method="post">
+              이름 : <input type="password" name="name"><br>
+              비번 : <input type="password" name="name"><br>
+              이메일 : <input type="password" name="name"><br>
+              성별 : <input type="radio" name="gender">남자 <br> &lt;!--라디에는 name=""을 동일하게 묶어줘야한다--&gt;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="gender">여자
+              <br>
+              취미 : <input type="checkbox">등산
+              <input type="checkbox">게임
+              <input type="checkbox" name="hb">독서 <br>
+              인사말 : <textarea rows="5" cols="50"> 하고싶은 말을 쓰세요.</textarea>
+              <br> <input type="submit" name="제출제출">
+              <input type="submit" value="제출제출">
+
+              <input type="submit" name="제출제출">
+              <input type="reset" value="초기화">
+
+       </form>
+
+
+
+
+       <pre>
+    &lt;form action="input.jsp" method="post"&gt;
+    이름 : &lt;input type="password" name="name"&gt;&lt;br&gt;
+    비번 : &lt;input type="password" name="name"&gt;&lt;br&gt;
+    이메일 :  &lt;input type="password" name="name"&gt;&lt;br&gt;
+    성별 : &lt;input type="radio" name="gender" &gt;남자 &lt;br&gt; <라디오에
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type="radio" name="gender" &gt;여자
+  &lt;br&gt;
+    취미 : &lt;input type="checkbox" &gt;등산
+           &lt;input type="checkbox" &gt;게임
+           &lt;input type="checkbox" name="hb"&gt;독서 &lt;br&gt;
+    인사말 : &lt;textarea rows="5" cols="50"&gt; 하고싶은 말을 쓰세요.&lt;/textarea&gt;
+    &lt;br&gt;   &lt;input type="submit" name="제출제출"&gt;
+           &lt;input type="submit" value="제출제출"&gt;
+  
+           &lt;input type="submit" name="제출제출"&gt;
+           &lt;input type="reset" value="초기화"&gt;
+    &lt;/form&gt;
+</pre>
+
+
+
+</body>
+
+</html>

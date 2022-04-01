@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>지각생의 웹세상</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <div id="page">
+    <div id="header">
+      <a href="index.html">지각생의 웹세상. </a>
+      HTML5 월드
+    </div>
+
+    <div id="main">
+
+
+      <ol type="I">
+        <li>
+          <h2><a ID="index 1">HTML5의 신기능</a></h2>
+        </li>
+        <ol>
+          <li>오프라인 웹 애플리케이션 - 네트워크가 연결되지 않은 상태에서도 실행 가능</li>
+          <li>드래그 앤 드롭 - 요소들을 마우스로 끌어서 넣을 수 있음</li>
+          <li>웹 스토리지 - 쿠키를 대체할 수 있는 웹 저장소 기능 제공</li>
+          <li>위치 정보 제공 - 지도 기능</li>
+          <li>웹 SQL 데이터베이스</li>
+          <li>파일 API 지원 - 파일 업로드와 파일 관리 기능 제공</li>
+          <li>웹소켓 API제공 - 서버와 브라우저 간의 양방향 통신 기능 제공</li>
+        </ol>
+
+
+
+
+        <li>
+          <h2><a ID="index 2">기본 태그들</a></h2><br>
+        </li>
+        <ol>
+          <li> Atom에서 기본적으로 작성해주는 태그들(2021년 기준)</li>
+          <li>!DOCTYPE html : 관용적 표현. 이 문서는 html에 있다란 의미.</li>
+          <li> html : head태그와 body태그를 포괄하는 태그. </li>
+          <li> head : body를 설명하는 태그들(meta,title)은 head태그로 묶기로 약속함.</li>
+          <li> meta : utf-8로 작성된 아톰 문서를 웹브라우저에서도 utf-8로 읽도록 지정하는 기능.meta charset="utf-8"</li>
+          <li>title : 제목. 작성시 웹페이지 최상단 꼬리표에 명시되는 타이틀.</li>
+          <li>body : 본문 내용은 body태그 사이에 넣기로 약속함.</li>
+        </ol>
+
+
+
+
+
+
+
+        <li>
+          <h2><a ID="index 3">주요 태그들</a></h2>
+        </li>
+        <ol>
+          <li>button: &lt;button&gt;야&lt;/button&gt; <button>야</button></li>
+          <li>strong : 글씨 진하게, 시각적 기능뿐 </li>
+          <li>br : 문장 띄워쓰기, /br같은 닫음표가 필요하지 않은 태그, 시각적 기능뿐임.</li>
+          <li>u : 밑줄</li>
+          <li>h1~h6 : 헤드라인 1~6까지</li>
+          <li>p : 단락을 나누는 태그, 단락을 나눈다는 정보로써 가치가 있는 태그, p style="margin-top:60px;"</li>
+          <li>img : 사진을 넣는 태그. 예시 img src="img/coding.jpg" width="100%"<--width와 scr 위치 바껴도 가능,닫기필요없음</li> <li>
+              alt(title)속성 : 브라우저 마다 명령어가 "alt" or "title"
+          </li>
+          <ol>
+            <li>
+              웹브라우저에 출력된 이미지에 커서를 올리면 alt에 지정해둔 글귀가 작게 보인다.
+            </li>
+            <li>
+              웹브라우저에 이미지가 깨졌을때 이미지 대신 대체하여 글자로 웹에 표기된다.
+            </li>
+
+            <li>\img src = "house.jpg" alt ="a nice house"\</li>
+          </ol>
+
+          <li>li : 리스트를 만드는 태그, 단락을 나누는 부모태그(ul)를 가진다.</li>
+          <li>ul : unordered list. 리스트의 단락을 만드는 태그, 리스트(li) 자식태그를 가진다. 번호매김 없음</li>
+          <ul>
+            <li>type="disc" <<--기본값</li> <li>type="circle"</li>
+            <li>type="square"</li>
+            <li>해당 형상의 말머리들이 표시된다.</li>
+          </ul>
+          <br>
+          <li>ol : ordered list. ul기능에서 자동번호매김기능 추가.</li>
+          <ul>
+            <li>type="1" <<--기본값</li> <li>type="I" <<--로마 대문자</li> <li>type="i" <<--로마 소문자</li> <li>type="A" <<--알파벳
+                      대문자</li> <li>type="a" <<--알파벳 소문자</li> <li>예시 : &lt;ol type="1" start="100"&gt; &lt;/ol&gt;</li>
+            <li>예시 설명 : 100번 번호부터 시작해서 "1"타입으로 번호를 매겨라.</li>
+          </ul>
+          <br>
+          <li>정의 리스트 (잘 안쓰긴 함)</li>
+          <ol>
+            dl<br>
+            dt 에스프레소 /dt<br>
+            dd -커피의 기본, 커피의 원액이다. /dd<br>
+            dt 아메리카노 /dt<br>
+            dd -에스프레소에 물을 넣은 것 /dd<br>
+            /dl<br>
+          </ol>
+          <li>table : 3대가 같이 다님.table,tr,td.아래는 예시</li>
+          <iframe src="예제모음/테이블예제4.html" width="600" height="400">테이블예제4</iframe>
+          <br>
+          <img src="img/테이블행열.jpg" width="600">
+          <li>(table) caption: 테이블 위에 머리글 장식 가능. &lt;table&gt;&lt;caption&gt;쓸 내용&lt;/caption&gt;&lt;table&gt; </li>
+          <li>(caption) align : caption은 어느 줄에 쓰더라도 표위에 표시되는데 &lt;caption align="bottom"&gt;를 하면 표 밑에 글을 표시할 수 있다
+          <li>a : anchor(닻).정보의 바다에 정박한다는 앵커의 첫글자 a.링크 기능.<br> 주소 적을때 http://www.식으로 http란을 꼭 입력하자.</li>
+          <ol>
+            <li>\a href="" target="_blank" title="설명"\ 링크 설명 \/a\</li>
+            <li><a href="" target="_blank" title="설명">링크 설명</a></li>
+          </ol>
+          <li>ID 속성 = 책갈피 기능= 동일페이지 내에서 지정위치로 페이지화면 이동.</li>
+          <ol>
+            <li>a href="#section1" 참고사항으로 가려면 여기를 클릭하세요. /a</li>
+            <li>a id="section1" 참고사항 /a</li>
+            <li></li>
+          </ol>
+          <li>이메일 링크</li>
+          <ol>
+            <li> a href="mailto : 메일주소?subject= " __ /a</li>
+            <li> a href="mailto : 메일주소" __ /a</li>
+          </ol>
+
+          <li>다운로드 링크 </li>
+          <ol>
+            <li>a href="sample.zip" ___ /a</li>
+            <li></li>
+            <li></li>
+          </ol>
+          <li>pre : 미리보기,
+            <pre></pre>
+          </li>
+          <li>i : <i>이탤릭체, 경사진거</i></li>
+          <li>strong : <strong>텍스트 강하게 표시한다.</strong></li>
+          <li>em : <em>이탤릭체와 동일함. 경사진거</em></li>
+          <li>code : <code>텍스트가 코드임을 표시한다.</code></li>
+          <li>sup : <sup>위첨자</sup></li>
+          <li>sub : <sub>아래첨자</sub></li>
+          <li>strike = s : <s>취소선</s></li>
+          <li>hr : 수평선,br처럼 단독으로 사용가능.
+            <hr />
+          </li>
+          <li>audio : 오디오 재생.&lt;audio src="old_pop.mp3" autoplay controls&gt; &lt;/audio &gt;</li>
+          <ul>
+            <li>&lt;audio autoplay controls&gt;</li>
+            <li>&lt;source src="old pop.ogg" type="audio/ogg" &gt;</li>
+            <li>&lt;source src="old pop.mp3" type="audio/mp3" &gt;</li>
+            <li> 너의 현재 브라우저에는 오디오 속성이 지원되지 않아.</li>
+            <li>&lt;/audio&gt;</li>
+            <li>브라우저마다 지원하는 형식이 다르므로 위와같이 모든 확장자를 써서 브라우저마다 해당되는 코드가 활성화되게 해주자.(이것은 비디오 영상에서도 마찬가지이다.)
+            <li>mp3 : 음성 압축 기술로 용량을 적게 잡아 먹기 때문에 유용하다.</li>
+            <li>wav : 용량을 많이 잡아 먹는편</li>
+            <li>ogg : 오픈소스, 즉 무료</li>
+          </ul>
+          <li>video : 비디오 재생. &lt;video src="movie.mp4" autoplay controls &gt;</li>
+          <ul>
+            <li>&lt;video src="movie.ogv" controls &gt;&lt;/video &gt;</li>
+            <li></li>
+            <li>비디오 예제</li>
+            &lt;body &gt;<br>
+            &lt;video width="640" height="480" controls &gt;<br>
+            &lt;source src="trailer.mp4" type='video/mp4' &gt;<br>
+            &lt;source src="trailer.ogv" type='video/ogv' &gt;<br>
+            &lt;/video &gt;<br>
+            &lt; body &gt;
+            <li>확장자 : mp4, WebM, ogv</li>
+            <li>비디오 요소 속성
+              <ul>
+                <li>autoplay</li>
+                <li>controls</li>
+                <li>loop(반복재생)</li>
+                <li>poster(비디오 다운로드 중 표시되는 이미지)</li>
+                <li>preload(유저가 사용할 생각 없더라도 전체 비디오 다운로드)</li>
+                <li>muted(음소거)</li>
+                <li>src</li>
+                <li>width</li>
+                <li>height</li>
+              </ul>
+          </ul>
+
+          <li>iframe : 페이지내에 새로운 윈도우를 만든다.</li>
+          <ul>
+            iframe 예제
+            <li>&lt;iframe src="inner.html" width="300" height="120" &gt; &lt;/iframe &gt;</li>
+            <li>유튜브 소스를 가져와서 동영상을 붙일 수도 있다.</li>
+            <li>frameborder="0"&lt;-Edge 브라우저에서 iframe 경계선 없애는 기능으로 사용가능하다.</li>
+            <li>seamless="0"&lt;-아마..크롬? 브라우저에서 iframe 경계선 없애는 기능으로 사용가능하다.</li>
+          </ul>
+
+          <li>div : CSS언어를 사용할 영역지정할때 쓰는 태그.&lt;p&gt;&lt;/p&gt;단락 기능 있음.</li>
+          <li>span : CSS언어를 사용할 영역지정할때 쓰는 태그.&lt;p&gt;&lt;/p&gt;단락 기능 없음.</li>
+          <li>form : HTML 입력 양식용 태그. 아래는 form태그 안에 활용하는 태그들이다.</li>
+          <br>
+          <ul type="disc">
+            <li>form 형식</li>
+            &lt;form action="input.jsp" method="post" &gt;<br>
+            &nbsp;&nbsp;&lt;input type="text" name="input"/ &gt;<br>
+            &nbsp;&nbsp;&lt;input type="submit" &gt;<br>
+            &lt;/form &gt;
+
+            <br>
+            <br>
+
+            <li>form 형식 method의 get과 post방식</li>
+            <ul>
+              <li>get : url주소 뒤에 파라미터를 붙여서 나오기 때문에 검색 관련 페이지에 유용하다</li>
+              <li>post : url주소 뒤에 파라미터가 붙지 않기 때문에 보안이 필요한 로그인창에 유용하다</li>
+            </ul>
+
+            <br>
+
+            <iframe src="예제모음.form.html" width="600" height="300"> </iframe>
+
+            <br>
+            <br>
+            <br>
+
+            <li>input 형식(form 태그 내에서도 자주쓰인다.)</li>
+            <img src="img/input형식.jpg" width="600" <br>
+
+            <ul>
+              <li>&lt; input type="text" name="name"&gt;</li>
+              <li>&lt; input type="submit" value="제출"&gt;</li>
+            </ul>
+            <br>
+            <li>input의 type="속성값"</li>
+            <ul>
+              <li>text : 텍스트 입력할 수 있는 한 줄짜리 필드 생성</li>
+              <li>password : 비밀번호 입력할 수 있는 한 줄짜리 필드 생성</li>
+              <li>radio : 라디오버튼 (보기 중 1개만 선택가능.예시_성별)</li>
+              <li>checkbox : 체크박스 생성.(보기 중 원하는거 모두 체크 가능)</li>
+              <li>reset : 초기화 버튼 생성</li>
+              <li>submit : 제출 버튼 생성</li>
+              <li>submit, reset등 버튼을 이미지버튼으로 하는 방법</li>
+              <img src="img/이미지버튼.png" width="600">
+              <li>위 이미지 하단에 필기부분을 이용하면 이미지버튼 기능을 쓸 수 있다.<br>
+                그런데 이미지버튼 기능 시 required 같은 기능은 먹히지 않았다. 자바스크립트등 기능이해가 필요할것으로 보인다.</li>
+              <li>date : 날짜를 입력할 수 있는 컨트롤</li>
+              <li>month : 월/연도</li>
+              <li>time : 시간</li>
+              <li>week : 주와 연도를 선택할 수 있는 컨트롤</li>
+              <li>color : 색상 코드를 입력할 수 있는 컨트롤</li>
+              <li>email : 표준 이메일 주소를 입력받아서 검증하는 컨트롤</li>
+              <li>tel : 전화번호를 입력받아서 검증하는 컨트롤</li>
+              <li>range : 2개의 숫자 사이의 숫자를 선택할 수 있는 슬라이더 컨트롤</li>
+              <li>number : 숫자만 입력받는 컨트롤</li>
+              <li>url : URL만 입력받는 컨트롤</li>
+            </ul>
+
+            <br>
+
+            <li>Html5에 추가된 &lt;input&gt;의 속성</li>
+            <ul>
+              <li>autofocus : 페이지가 로드되면 자동으로 입력 포커스를 갖는다.</li>
+              <li>placeholder : 입력 힌트를 희미하게 보여준다.</li>
+              <li>readonly : 읽기 전용 필드</li>
+              <li>required : 입력 양식을 제출하기 전에 반드시 채워져 있어야 함을 나타낸다.</li>
+              <li>pattern : 허용하는 입력의 형태를 정규식으로 지정한다.</li>
+            </ul>
+
+            <br>
+
+            <li>정규식</li>
+            <ul>
+              <li>특정한 규칙을 가지고 있는 문자열들을 표현</li>
+              <li>정규 표현식은 /과 / 내부에 위치</li>
+              <table border="1" name="">
+                <tr>
+                  <td>중요도(높을수록 중요)</td>
+                  <td>식</td>
+                  <td>기능</td>
+                  <td>설명</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>.</td>
+                  <td>문자</td>
+                  <td>한 개의 어떤 문자와도 일치</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>\d</td>
+                  <td>숫자</td>
+                  <td>한 개의 숫자와 일치</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>\w</td>
+                  <td>문자와 숫자</td>
+                  <td>한 개의 문자나 숫자와 일치</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>\s</td>
+                  <td>공백 문자</td>
+                  <td>공백, 탭, 줄 바꿈, 캐리지 리턴 문자와 일치 </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>^ </td>
+                  <td>시작</td>
+                  <td>패턴의 시작을 표시</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>$</td>
+                  <td>끝</td>
+                  <td>패턴의 끝을 표시</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>[]</td>
+                  <td>문자 종류, 문자 범위</td>
+                  <td>[abc]는 a 또는 b 또는 c를 나타낸다. [a-z]는 a부터 z까지 중의 하나, [1-9]는 1부터 9까지 중의 하나를 나타낸다.</td>
+                </tr>
+              </table><br>
+              <img src="img/정규식.png" width="600">
+            </ul>
+
+            <br>
+
+            <li>수량한정자</li>
+            <ul>
+              <table border="1" name="">
+                <tr>
+                  <td>중요도(높을수록 중요)</td>
+                  <td>수량 한정자</td>
+                  <td>기능</td>
+                  <td>설명</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>()</td>
+                  <td>문자를 그룹핑한다.</td>
+                  <td>"abc adc" 와 "a(b d)c"는 같은 의미를 가진다.</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>*</td>
+                  <td>0회 이상 반복</td>
+                  <td>"a*b는 "b","ab","aab","aaab"를 나타낸다.</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>+</td>
+                  <td>1회 이상</td>
+                  <td>"a+b"는 "ab","aab","aaab"를 나타내지만"b"는 포함하지 않는다.</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>?</td>
+                  <td>0 또는 1회</td>
+                  <td>"a?b"는 "b","ab"를 나타낸다. </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>{m} </td>
+                  <td>m회/td>
+                  <td>"a{3}b"는 "aaab"와 매칭된다.</td>
+                </tr>
+              </table>
+              <li>정규식이나 수량한정자는 네이버에 검색시 블로그등에 써진거 많으니 복붙하자.<br>
+                ex)/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+                [출처] 이메일 정규식을 이용한 유효성체크|작성자 SkyMoonStar
+              </li>
+              <br>
+
+            </ul>
+            <img src="img/수량한정자.png" width="600">
+
+            <br>
+
+            <li>fieldset 태그</li>
+            <ul>
+              <li>
+                입력요소 그룹핑 하는 요소
+              </li>
+            </ul>
+            <iframe src="예제모음/fieldset.html" width="600" height="300"></iframe>
+
+
+            <br>
+
+            <li>select 요소</li>
+            <ul>
+              <li>여러개 중 1가지 선택하는 창 만드는 요소</li>
+            </ul>
+            <iframe src="예제모음/select.html" width="600" height="300"> </iframe>
+
+            <br>
+
+            <li>textarea 형식</li>
+            <ul>
+              <li>&lt; textarea rows="5" cols="50"&gt; &lt;/textarea &gt;</li>
+              <textarea rows="5" cols="50"></textarea>
+            </ul>
+          </ul>
+
+          <li>style : CSS 서식을 감싸는 태그.</li>
+          <li></li>
+
+        </ol>
+
+
+
+
+
+
+
+
+
+        <li>
+          <h2><a ID="index 4">Visual Studio Code 환경설정</a></h2>
+        </li>
+        <ol type="1">
+          <li>visual studio code 확장</li>
+          <ul>
+            <li>다운로드</li>
+            <li>검색창에 korean입력 한국어 패키치 설치 가능</li>
+            <li>위와 같은 곳에서 live server검색 확장팩 설치-> 코드문 Ctrl+s-> Alt+L+O- > 웹브라우저 자동 업데이트 연동</li>
+          </ul>
+          <br>
+
+          <li>visual studio code 작성</li>
+          <ul>
+            <li>뉴파일</li>
+            <li>다른이름으로 저장</li>
+            <li>파일형식 HTML으로 저장</li>
+            <li>파일이름 작성 후 저장.</li>
+            <li>html:5를 입력도중 html:5엔터치면</li>
+            <li>자동으로 여러 태그들 생성됨.</li>
+            <li>lang="en" -> lang="ko" 로 변경해주고</li>
+            <li>
+              <title>늦깎이의 웹세상</title>타이틀도 작성해 주자
+            </li>
+          </ul>
+          <br>
+
+          <li>주석 : &lt;!--여기에 주석을 표시합니다.--&gt;
+            <!--여기에 주석을 표시합니다.-->
+          </li>
+          <br>
+
+          <li>특수문자, 글자앞에 공통적으로 &붙여서 사용</li>
+          <ul>
+            <li>nbsp; : non-breaking space의 약자.&nbsp; </li>
+            <>lt; : <ol</li> <li>gt; : ></li>
+                <li>quot; : "</li>
+                <li>amp; : &</li>
+                <li>copy; : C동그라미 </li>
+          </ul>
+        </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <li>
+          <h2><a ID="index 5">이론</a></h2>
+        </li>
+        <ol>
+
+          <li>이미지의 종류</li>
+          <ol>
+            <li>JPEG : 실사사진, 복잡하고 많은 색상, 손실 압축 방식</li>
+            <li>PNG : 단순한 색상, 무손실 압축 방식</li>
+            <li>GIF : 로고나 클립아트 등 단순 색상, 256색상만 지원, 투명배경과 애니메이션 지원.ㅇ</li>
+          </ol>
+          <li></li>
+
+        </ol>
+
+
+
+
+
+
+
+
+
+
+
+        <li>
+          <h2><a id="index 6">직업훈련학교 윤쌤 시험문제</a></h2>
+        </li>
+        <ol type="I">
+          <li>테이블</li>
+          <iframe src="예제모음/table.html" width="600" height="300"></iframe>
+
+          <li>이미지 파일의 3가지 형식 : JPEG, PNG, GIF</li><br>
+          <li>form태그</li>
+          <iframe src="예제모음/시험문제예제5.html" width="600" height="300"></iframe>
+        </ol>
+      </ol>
+
+      <p style="margin-top:200px;">
+        <h4>정리표에 적용할 항목들 : 기능,열림닫힘,html예시, css포함예시, 태그단축키의 풀네임.</h4>
+
+    </div>
+    <div id="sidebar">
+      목록
+      <ol>
+        <li><a href="#index 1">HTML5</a></li>
+        <li><a href="#index 2">기본 태그</a></li>
+        <li><a href="#index 3">주요태그</a></li>
+        <li><a href="#index 4">VS Code</a></li>
+        <li><a href="#index 5">이론</a></li>
+        <li><a href="#index 6">시험문제</a></li>
+      </ol>
+    </div>
+
+    <div id="footer">
+      다른 월드로 &nbsp;:&nbsp;
+      <a href="html5.html">HTML5 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="css3.html">CSS3 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="파이썬.html">파이썬 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="javaScript.html">자바스크립트 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="java.html">자바 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+    </div>
+  </div>
+</body>
+
+</html>

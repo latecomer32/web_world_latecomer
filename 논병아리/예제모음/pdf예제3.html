@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF 예제3</title>
+    <style>
+        pre {
+            font-family: "맑은 고딕";
+        }
+    </style>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 700px;
+
+
+        }
+
+        .a {
+            border-width: 1px 0px 1px 0px;
+            border-style: solid;
+            border-color: rgb(180, 180, 180);
+
+        }
+
+        .b {
+            background-color: rgb(238, 238, 255);
+            width: 80px;
+            font-weight: bold;
+            font-size: 9pt;
+            padding: 8px 0px 8px 10px;
+            color: rgb(4, 4, 95);
+        }
+
+        .c {
+            width: 170px;
+            border: 1px solid rgb(212, 212, 212);
+            border-radius: 3pt;
+            font-size: 8pt;
+            color: rgb(136, 136, 136);
+            padding: 3px 100px 3px 4px;
+        }
+
+        .d {
+            width: 595px;
+            border: 1px solid rgb(212, 212, 212);
+            border-radius: 3pt;
+        }
+
+        .e {
+            font-size: 8pt;
+            color: rgb(136, 136, 136);
+            padding: 1px 1px 1px 4px;
+        }
+
+        .f {
+
+            border: 0px solid white;
+            width: 595px;
+        }
+
+        .g {
+            border: 1px solid rgb(212, 212, 212);
+            width: 480px;
+            border-radius: 3pt;
+            margin: 0px;
+        }
+
+        .h {
+            border: 1px solid rgb(212, 212, 212);
+            width: 100px;
+            border-radius: 3pt;
+            margin: 0px;
+        }
+
+        .i {
+            background-color: rgb(1, 1, 119);
+            width: 70px;
+            border-radius: 3pt;
+            color: white;
+            text-align: center;
+            font-size: 9pt;
+            padding: 6px 1px 6px 4px;
+            border: 1px solid white;
+        }
+
+        .j {
+            background-color: gray;
+            width: 70px;
+            border-radius: 3pt;
+            color: white;
+            font-size: 9pt;
+            margin: 10px 0px 0px 0px;
+            padding: 6px 1px 6px 4px;
+            border: 1px solid white;
+        }
+
+        .aa {
+            text-align: center;
+        }
+
+        .bb {
+            padding: 0px 0px 3px 0;
+            margin: 0px;
+        }
+
+        .cc {
+            padding: 3px 0px 0px 0;
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="get" enctype="multipart/form-data">
+        <table border="0" name="ex3">
+            <tr class="a">
+                <td class="b">
+                    *구분
+                </td>
+                <td>
+                    <select name="part" class="c">
+                        <option value="자유게시판">자유게시판</option>
+                        <option value="익명게시판">익명게시판</option>
+                        <option value="선택" selected>선택</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="a">
+                <td class="b">
+                    *제목
+                </td>
+                <td>
+                    <input type="text" name="title" required class="d">
+                </td>
+            </tr>
+            <tr class="a">
+                <td class="b">
+                    비밀글
+                </td>
+                <td class="e">
+                    <input type="checkbox" name="check">비밀글 여부
+                </td>
+            </tr>
+            <tr class="a">
+                <td class="b">
+                    *내용
+                </td>
+                <td>
+                    <textarea rows="14" cols="40" class='f'>
+
+            </textarea>
+
+                </td>
+            </tr>
+            <tr class="a">
+                <td class="b">
+                    첨부파일
+                </td>
+                <td class="bb"><input type="text" name='file' class='g'>
+                    <input type="button" value="첨부파일" class='h'>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="aa"><input type="submit" value="등록" class='i'>
+                    <input type="reset" value="취소" class='j'></td>
+            </tr>
+        </table>
+
+
+    </form>
+
+    <pre>
+    &lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;PDF 예제3&lt;/title&gt;
+    &lt;style&gt;
+        table {
+            border-collapse: collapse;
+            width: 700px;
+
+
+        }
+
+        .a {
+            border-width: 1px 0px 1px 0px;
+            border-style: solid;
+            border-color: rgb(180, 180, 180);
+
+        }
+
+        .b {
+            background-color: rgb(238, 238, 255);
+            width: 80px;
+            font-weight: bold;
+            font-size: 9pt;
+            padding: 8px 0px 8px 10px;
+            color: rgb(4, 4, 95);
+        }
+
+        .c {
+            width: 170px;
+            border: 1px solid rgb(212, 212, 212);
+            border-radius: 3pt;
+            font-size: 8pt;
+            color: rgb(136, 136, 136);
+            padding: 3px 100px 3px 4px;
+        }
+
+        .d {
+            width: 595px;
+            border: 1px solid rgb(212, 212, 212);
+            border-radius: 3pt;
+        }
+
+        .e {
+            font-size: 8pt;
+            color: rgb(136, 136, 136);
+            padding: 1px 1px 1px 4px;
+        }
+
+        .f {
+
+            border: 0px solid white;
+            width: 595px;
+        }
+
+        .g {
+            border: 1px solid rgb(212, 212, 212);
+            width: 480px;
+            border-radius: 3pt;
+            margin: 0px;
+        }
+
+        .h {
+            border: 1px solid rgb(212, 212, 212);
+            width: 100px;
+            border-radius: 3pt;
+            margin: 0px;
+        }
+
+        .i {
+            background-color: rgb(1, 1, 119);
+            width: 70px;
+            border-radius: 3pt;
+            color: white;
+            text-align: center;
+            font-size: 9pt;
+            padding: 6px 1px 6px 4px;
+            border: 1px solid white;
+        }
+
+        .j {
+            background-color: gray;
+            width: 70px;
+            border-radius: 3pt;
+            color: white;
+            font-size: 9pt;
+            margin: 10px 0px 0px 0px;
+            padding: 6px 1px 6px 4px;
+            border: 1px solid white;
+        }
+
+        .aa {
+            text-align: center;
+        }
+
+        .bb {
+            padding: 0px 0px 3px 0;
+            margin: 0px;
+        }
+
+        .cc {
+            padding: 3px 0px 0px 0;
+            margin: 0px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;form action="#" method="get" enctype="multipart/form-data"&gt;
+        &lt;table border="0" name="ex3"&gt;
+            &lt;tr class="a"&gt;
+                &lt;td class="b"&gt;
+                    *구분
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;select name="part" class="c"&gt;
+                        &lt;option value="자유게시판"&gt;자유게시판&lt;/option&gt;
+                        &lt;option value="익명게시판"&gt;익명게시판&lt;/option&gt;
+                        &lt;option value="선택" selected&gt;선택&lt;/option&gt;
+                    &lt;/select&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="a"&gt;
+                &lt;td class="b"&gt;
+                    *제목
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;input type="text" name="title" required class="d"&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="a"&gt;
+                &lt;td class="b"&gt;
+                    비밀글
+                &lt;/td&gt;
+                &lt;td class="e"&gt;
+                    &lt;input type="checkbox" name="check"&gt;비밀글 여부
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="a"&gt;
+                &lt;td class="b"&gt;
+                    *내용
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;textarea rows="14" cols="40" class='f'&gt;
+
+            &lt;/textarea&gt;
+
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="a"&gt;
+                &lt;td class="b"&gt;
+                    첨부파일
+                &lt;/td&gt;
+                &lt;td class="bb"&gt;&lt;input type="text" name='file' class='g'&gt;
+                    &lt;input type="button" value="첨부파일" class='h'&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td colspan="2" class="aa"&gt;&lt;input type="submit" value="등록" class='i'&gt;
+                    &lt;input type="reset" value="취소" class='j'&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+
+
+    &lt;/form&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+</body>
+
+</html>

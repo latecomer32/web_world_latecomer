@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>지각생의 웹세상</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <div id="page">
+    <div id="header">
+      <a href="00_index.html">지각생의 웹세상. </a>
+      CSS3 월드
+    </div>
+
+    <div id="main">
+
+
+      <ol type="I">
+        <li>
+          <h2><a id="index 1">CSS3의 기능 및 문법</a></h2>
+        </li>
+        <ol>
+          <li>CSS3의 기능</li>
+          <ul>
+            <li>선택자: 태그를 지칭함.</li>
+            <li>박스 모델 : 박스 두께, 색상등 바꿀 수 있다.</li>
+            <li>배경 및 경계선</li>
+            <li>텍스트 효과</li>
+            <li>사용자 인터테이스</li>
+            <li>2차원,3차원변환 / 애니메이션/ 다중 컬럼 레이아웃 등 여러 기능이 있다</li>
+          </ul>
+
+          <li>CSS3의 문법</li>
+          <ul>
+            <li>선택자{ 속성: 값;}</li>
+            <li>끝에 반드시 ;을 적어 준다.</li>
+          </ul>
+        </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+        <li>
+          <h2><a id="index 2">선택자</a></h2>
+        </li>
+        <ul type="square">
+          <li>p{color(속성):blue(값);}</li>
+          <li>(선택자) { (속성): (값); }</li>
+          <li>선택자는 JQuery에서도 사용</li>
+          <li>가장 많이 사용되는 것은 6가지 정도</li>
+        </ul>
+        <ol>
+          <li>선택자의 종류</li>
+          <ul>
+            <li>타입 선택자</li>
+            <li>전체 선택자</li>
+            <li>클래스 선택자</li>
+            <li>아이디 선택자</li>
+            <li>아이디 선택자</li>
+            <li>아이디 선택자</li>
+            <li>속성 선택자</li>
+            <li>의사 선택자</li>
+          </ul>
+          <li>타입 선택자</li>
+          <ul>
+            <li>HTML 요소 이름을 사용</li>
+            <li>예를 들어 P태그, h1태그 등</li>
+          </ul>
+          <li>전체 선택자</li>
+          <ul>
+            <li>페이지 안의 모든 요소를 선택</li>
+
+          </ul>
+          <li>아이디 선택자</li>
+          <ul>
+            <li>특정한 요소를 선택</li>
+            <li> #target { color : red;}</li>
+            <li> &lt;p id="target"&gt;Hello Worldl!&lt;/p&gt;</li>
+          </ul>
+          <li>클래스 선택자</li>
+          <ul>
+            <li>클래스가 부여된 요소를 선택한다.</li>
+            <li> .target { color : red;}</li>
+            <li> &lt;p class="target"&gt;Hello Worldl!&lt;/p&gt;</li>
+          </ul>
+          <li>선택자 그룹</li>
+          <ul>
+            <li>선택자를 콤마(,)로 분리하여 나열할 수 있다.</li>
+            <li> h1, h2, h3 {font-family : sans-serif;}</li>
+          </ul>
+          <li>자손, 자식, 형제 결합자</li>
+          <img src="img/자손,자식.jpg" width="700">
+          <ul>
+            <li>선택자를 콤마(,)로 분리하여 나열할 수 있다.</li>
+            <li> h1, h2, h3 {font-family : sans-serif;}</li>
+          </ul>
+
+          <li>의사 클래스</li>
+          <ul>
+            <li>클래스가 정의된 것처럼 간주</li>
+            <li>a:link{color:blue;} , 방문한 적 없음</li>
+            <li>a:visited{color:green;} , 방문한 적 있음</li>
+            <li>a:hover{color:red;} , 마우스 갖다댐</li>
+            <li>a:active{ color:yellow;} , 마우스 클릭하는 순간</li>
+            <li>#id.a:link{} 구문으로 사용가능하다</li>
+            <fieldset>
+              <legend>
+                사용예시
+              </legend>
+              <iframe src="예제모음/link예제.html" width="700" height="80" frameborder="0" seamless="0">
+              </iframe>
+            </fieldset>
+
+            <iframe src="예제모음/link예제미리보기.html" width="700">
+            </iframe>
+            <li>사용예시 추가했는데 필드셋 너비 조절하는 속성은 무엇?</li>
+          </ul>
+
+          <li>속성 선택자</li>
+          <ol>
+            <li>특정한 속성을 가지는 요소를 선택한다.</li>
+            <li>h1[title]{color:blue;}</li>
+            <li>p[class="example"]{color:blue;}</li>
+          </ol>
+        </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <li>
+          <h2><a id="index 3">CSS 삽입 위치</a></h2>
+        </li>
+        <ol>
+          <li>외부 스타일 시트</li>
+          <ul>
+            <li>외부 스타일 시트는 스타일 시트를 외부에 파일로 저장하는 것</li>
+            <li>많은 페이지에 동일한 스타일을 적용하려고 할 때 좋은 방법</li>
+            <li>&lt;link type="text/css" rel="stylesheet" href="mystyle.css"&gt;</li>
+          </ul>
+
+          <li>내부 스타일 시트</li>
+          <ul>
+            <li>내부 스타일 시트는 HTML 안에 CSS를 정의하는 것이다.</li>
+            <li>
+              <pre>
+      &lt;head&gt;
+      &lt;style&gt;
+      h1{ color:red;}
+      p{ color:#0026ff;}
+      &lt;/style&gt;
+      &lt;/head&gt;
+      </pre>
+            </li>
+          </ul>
+
+          <li>인라인 스타일 시트</li>
+          <ul>
+            <li>각각의 HTML 요소마다 스타일을 지정하는 것</li>
+            <li>2개 이상의 선언이 있다면 반드시 끝에 ;을 적어준다.</li>
+            <li>예시 &lt;p style="text-align:center"&gt;</li>
+          </ul>
+          <li>다중 스타일 시트</li>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <li>
+          <h2><a id="index 4">CSS의 속성들</a></h2>
+        </li>
+        <ol>
+          <li>폰트</li>
+
+          <table border="1" width='650'>
+            <tr>
+              <td>속성</td>
+              <td>설명</td>
+              <td>값</td>
+              <td>비고</td>
+            </tr>
+            <tr>
+              <td>color</td>
+              <td>글자색</td>
+              <td>red;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>font</td>
+              <td>한 줄에서 모든 폰트 속성을 설정</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>font-weight</td>
+              <td>볼드체 설정</td>
+              <td>normal;<br>bold;<br></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>font-size</td>
+              <td>폰트의 크기</td>
+              <td>pt;<br>px;<br> %;<br> em(배수);<br> 키워드(small, medium,,,);<br></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>font-style</td>
+              <td>이탤릭체 설정</td>
+              <td>normal;<br> italic;<br> oblique;<br></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>font-family</td>
+              <td>글꼴</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+
+          <img src="img/fontfamily.jpg" width="700">
+
+
+          <li>텍스트</li>
+
+          <table border="1" name="text" width='650'>
+            <tr>
+              <td>속성</td>
+              <td>설명</td>
+              <td>값;</td>
+              <td>비고</td>
+            </tr>
+            <tr>
+              <td>color</td>
+              <td>글자 색</td>
+              <td>색상값;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>text-align</td>
+              <td>정렬</td>
+              <td>left;<br> right;<br> center;<br> justify(양쪽정렬);<br></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>text-decoration</td>
+              <td>밑줄,윗줄,가운데 줄</td>
+              <td>none;<br> underline;<br> oveline;<br> line-through(글자 가운데 선);<br></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>text-transform</td>
+              <td>대소문자 변환</td>
+              <td>uppercase(모두 대문자);<br> lowercase(모두 소문자);<br> capitalize(첫글자만 대문자);<br></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>text-indent</td>
+              <td>들여쓰기</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>text-shadow</td>
+              <td>그림자 효과</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>line-height</td>
+              <td>줄의 높이</td>
+              <td>180%</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>letter-spacing</td>
+              <td>글자간 간격</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>direction</td>
+              <td>작성 방향. 가로쓰기, 세로쓰기</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>word-wrap</td>
+              <td>글자 자동 줄 바꿈</td>
+              <td>break-word;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>column-count</td>
+              <td>다단(신문기사에 글자들 단 나뉜거처럼)</td>
+              <td>2;</td>
+              <td></td>
+            </tr>
+          </table>
+
+
+          <li>경계선</li>
+          <ul>
+            <li>border : 요소를 감싸는 경계선</li>
+          </ul>
+          <table border="1" width='650'>
+            <tr>
+              <td>속성</td>
+              <td>설명</td>
+              <td>값</td>
+              <td>비고</td>
+            </tr>
+            <tr>
+              <td>border-style</td>
+              <td>경계선 종류</td>
+              <td>none;<br> dotted;<br> dashed;<br> solid;<br> double;<br> groove;<br> ridge;<br> inset;<br> outset;<br>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>border-width</td>
+              <td>경계선의 폭</td>
+              <td>1px 1px 1px 1px;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>border-color</td>
+              <td>경계선의 색상</td>
+              <td>색값;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>border-radius</td>
+              <td>둥근 경계선</td>
+              <td>1px;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>box-shadow</td>
+              <td>경계선 그림자</td>
+              <td>2px 2px 2px #666666 (x위치 y위치 흐린값 색값);</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>border</td>
+              <td>경계축약</td>
+              <td>5px solid red (width style color);</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>border-width:<br>
+                border-style:<br>
+                border-color:<br>
+              </td>
+              <td>경계축약2</td>
+              <td>0px 0px 1px 0px; (top right bottom left)(시계방향)<br>
+                solid;<br>
+                blue;
+              </td>
+              <td></td>
+            </tr>
+
+          </table>
+          <li>마진과 패딩</li>
+          <table border="1" width='650'>
+            <tr>
+              <td>속성</td>
+              <td>설명</td>
+              <td>값</td>
+              <td>비고</td>
+            </tr>
+            <tr>
+              <td>margin</td>
+              <td>border바깥여백</td>
+              <td>0px 0px 0px 0px;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>padding</td>
+              <td>border안쪽여백</td>
+              <td>0px 0px 0px 0px;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>속성</td>
+              <td>설명</td>
+              <td>값</td>
+              <td>비고</td>
+            </tr>
+          </table>
+
+
+          <li>배경</li>
+          <ul>
+            <li>background-color : 배경색</li>
+            <li>background-image : 배경이미지</li>
+
+          </ul>
+          <table border='1' width="650">
+            <tr>
+              <td>속성</td>
+              <td>설명</td>
+              <td>값</td>
+              <td>비고</td>
+            </tr>
+            <tr>
+              <td>background</td>
+              <td>한줄에서 모든 배경 속성 정의</td>
+              <td>red url('back.gif') no-repeat rignt top;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>background-attachment</td>
+              <td>배경이미지가 고정or스크롤</td>
+              <td>fixed; <BR> scroll(기본값);</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>background-color</td>
+              <td>배경색</td>
+              <td>red;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>background-image</td>
+              <td>배경이미지</td>
+              <td>url('이미지.png');</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>background-repeat</td>
+              <td>반복여부</td>
+              <td>no-repeat;<br>
+                repeat;<br>
+                repeat-x;<br>
+                repeat-y;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>background-position</td>
+              <td>이미지 시작위치</td>
+              <td>100px 100px;<br></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>background-size</td>
+              <td>이미지 크기</td>
+              <td>100px 100px;</td>
+              <td></td>
+            </tr>
+          </table>
+
+          <li>리스트</li>
+          <table border="1" width="650">
+            <tr>
+              <td>속성</td>
+              <td>설명</td>
+              <td>값</td>
+              <td>비고</td>
+            </tr>
+            <tr>
+              <td>list-style</td>
+              <td>리스트 속성 한줄 설정</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>list-style-image</td>
+              <td>*리스트 항목 마커를 이미지로 지정.</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>list-style-position</td>
+              <td>리스트 마커의 위치를 안쪽인지 바깥쪽인지 지정</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>list-style-type</td>
+              <td>리스트 마커 타입 지정</td>
+              <td>circle;<br>square;<br>upper-roman;<br>lower-alpha;<br></td>
+              <td>그냥 &lt;ul type="circle"&gt;가 낫다</td>
+            </tr>
+          </table>
+
+          <li>테이블 스타일</li>
+          <table border="1" width="650">
+            <tr>
+              <td>속성</td>
+              <td>설명</td>
+              <td>값</td>
+              <td>비고</td>
+            </tr>
+            <tr>
+              <td>border</td>
+              <td>테이블의 경계선</td>
+              <td>5px solid red (width style color);</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>border-collapse</td>
+              <td>이웃한 셀의 경계선을 합칠 것인지</td>
+              <td>collapse;<br>
+                separate;(기본값)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>border-spacing</td>
+              <td>테이블 셀 사이의 거리</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>empty-cells</td>
+              <td>공백 셀을 그릴 것인지 여부</td>
+              <td>hide;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>table-align</td>
+              <td>테이블 셀의 정렬 설정</td>
+              <td></td>
+              <td>text-align 방식 권장</td>
+            </tr>
+          </table>
+
+          <li>display</li>
+          <table border='1' width='650'>
+            <tr>
+              <td>속성</td>
+              <td>설명</td>
+              <td>값</td>
+              <td>비고</td>
+            </tr>
+            <tr>
+              <td>display</td>
+              <td>화면 배치</td>
+              <td>blcok;(기본값)<br>
+                inline;<br>
+                none;<br>
+                hidden;<br>
+              </td>
+              <td>inline이 가로로<br> 길게 쓰는<br> 방식인데 자주쓴다</td>
+            </tr>
+          </table>
+          <br>
+
+
+          CSS / display 속성으로 표 만들기 - table, table-row, table-cell<br>
+
+          display 속성값 중 표와 관련된 값들<br>
+          display 속성값으로 table, table-row, table-cell 등을 사용해서 요소를 표(table)처럼 표현할 수 있습니다.<br>
+          표처럼 보이기 위해 사용할 수 있는 속성값들은 다음과 같습니다.<br>
+
+          table : &lt;table&gt; 요소처럼 표현합니다.<br>
+          table-caption : &lt;caption&gt; 요소처럼 표현합니다.<br>
+          table-column-group :<br>
+          &lt;colgroup&gt; 요소처럼 표현합니다.<br>
+          table-header-group :<br>
+          &lt;thead&gt; 요소처럼 표현합니다.<br>
+          table-footer-group :<br>
+          &lt;tfoot&gt; 요소처럼 표현합니다.<br>
+          table-row-group : &lt;tbody&gt; 요소처럼 표현합니다.<br>
+          table-cell : &lt;td&gt; 요소처럼 표현합니다.<br>
+          table-column :<br>
+          &lt;col&gt; 요소처럼 표현합니다.<br>
+          table-row : &lt;tr&gt; 요소처럼 표현합니다.<br>
+
+          isplay: table-cell;<br>
+          vertical-align: middle;<br>
+          위의 속성값으로 표처럼 표현되도록 만든 후에는,<br>
+          표를 꾸미는 것과 같은 방법으로 해당 요소를 꾸밀 수 있습니다.<br>
+          주의할 점은, IE의 경우 8 이상에서 지원한다는 것입니다.<br>
+
+
+
+
+
+
+          <li>
+            <h4>위치 설정 방법</h4>
+          </li>
+          <table border="1" width='650'>
+            <tr>
+              <td>속성</td>
+              <td>설명</td>
+              <td>값</td>
+              <td>비고</td>
+            </tr>
+            <tr>
+              <td>position</td>
+              <td>정상적 배치<br>
+                정상적 위치가 기준<br>
+                컨테이너의 원점이 기준<br>
+                윈도우 원점 기준</td>
+              <td>static;<br>
+                relative;<br>
+                absolute;<br>
+                fixed;<br></td>
+              <td></td>
+            </tr>
+          </table>
+
+          <li>float</li>
+          <table border="1" width="650">
+            <tr>
+              <td>속성</td>
+              <td>설명</td>
+              <td>값</td>
+              <td>비고</td>
+            </tr>
+            <tr>
+              <td>float</td>
+              <td></td>
+              <td>left;<br>
+                right;<br></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>clear</td>
+              <td>float중단</td>
+              <td>both;</td>
+              <td></td>
+            </tr>
+          </table>
+
+          <li>z-index</li>
+          <table border="1" width="650">
+            <tr>
+              <td>속성</td>
+              <td>설명</td>
+              <td>값</td>
+              <td>비고</td>
+            </tr>
+            <tr>
+              <td>z-index</td>
+              <td></td>
+              <td>100;<br>
+                2;<br>
+                1;<br>
+                0;<br>
+                -1;<br></td>
+              <td></td>
+            </tr>
+          </table>
+
+
+          <li> CSS3 효과</li>
+          <table border="1" width="650">
+            <tr>
+              <td>속성</td>
+              <td>설명</td>
+              <td>값</td>
+              <td>비고</td>
+            </tr>
+            <tr>
+              <td>opacity</td>
+              <td>투명도</td>
+              <td>0.0~1.0;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>visibility</td>
+              <td>가시성</td>
+              <td>hidden;<br>
+                visible;<br></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>transition</td>
+              <td>전환</td>
+              <td>5s;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>-webkit-transform</td>
+              <td>회전 전환</td>
+              <td>rotate(180deg);</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>transform</td>
+              <td></td>
+              <td>translate(10px,10px);평행이동<br>
+                rotate(45deg);회전<br>
+                scale(2,1.2);크기변환<br>
+                skew(20deg,10deg);비틀기 변환<br>
+                matrix();일반적인 변환<br></td>
+              <td></td>
+            </tr>
+          </table>
+
+
+
+
+
+
+
+          <li>색상</li>
+          <ol>
+            <li>이름으로 표현 : "red"</li>
+            <li>10진수로 표현 : rgb(255, 0, 0)</li>
+            <li>퍼센트로 표현 : rgb(100%, 0%, 0%)</li>
+            <li>16진수로 색상 나타내기</li>
+            <img src="img/16진수색상.jpg" width="700">
+          </ol>
+
+
+
+
+        </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <li>
+          <h2><a id="index 5">박스 모델</a></h2>
+        </li>
+        <ol>
+          <ul>
+            <li>HTML 요소들을 박스 형태로 그리는 것.</li>
+            <li>박스는 배치, 색상, 경계 등의 속성을 가진다.</li>
+          </ul>
+
+          <li>
+            <h4>박스 모델의 속성</h4>
+          </li>
+          <ul>
+            <li> margin&lt;border(경계)&lt;padding&lt; content &gt;padding&gt;border&gt;margin</li>
+            <li>resize:both; 박스 크기조절 가능</li>
+
+          </ul>
+
+          <li>마진과 패딩</li>
+          <img src="img/마진과패딩.jpg" width='550' height="500">
+
+          <li>요소의 크기 지정</li>
+          <ul>
+            <li>width,height-요소의 크기</li>
+            <li>min-width, min-height:요소의 최대 크기</li>
+            <li>max-width, max-height:요소의 최대 크기</li>
+          </ul>
+          <li>overflow 속성</li>
+          <ul>
+            <li>자식 요소가 부모 요소의 범위를 벗어났을때, 어떻게 처리할 것인지를 지정</li>
+            <li>hidden - 부모 영역을 벗어나는 부분을 보이지 않게 한다.</li>
+            <li>scroll - 부모 영역을 벗어나는 부분을 스크롤 할 수 있도록 한다.</li>
+            <li>auto - 자동으로 스크롤바가 나타난다.</li>
+          </ul>
+          <li>시맨틱 요소 레이아웃</li>
+          <img src="img/시맨틱요소1.jpg" width="700">
+          <img src="img/시맨틱요소2.jpg" width="700">
+          <iframe src="예제모음\p219시맨틱.html" width="700" height="450"></iframe>
+
+          <li>table-cell 속성</li>
+          <img src="img/테이블셀.jpg" width="700">
+
+        </ol>
+
+
+
+
+
+        <li>
+          <h2><a id="index 8">플렉스</a></h2>
+        </li>
+        <pre>
+        플렉스는 기본적으로 부모와 자식 태그간의 레이아웃에 영향을 미친다.
+        따라서 부모 태그에 쓰이는 속성과 자식태그에 쓰이는 속성이 구분된다.
+        
+        우선 부모태그에 쓰이는 속성들을 알아보자.
+        
+        display : flex;
+        바로 아래 자식 태그까지만 영향을 미치는 레이아웃 기능.
+        
+        flex-direction: column;
+        자식 태그의 배치를 열로 둔다. row가 기본값
+
+        justify-content: center;
+        자식 태그의 배치를 중앙정렬
+        space-between
+        flex-start등등
+
+        align-content: center;
+
+
+    </pre>
+
+
+
+
+        <li>
+          <h2><a id="index 6">시험문제</a></h2>
+        </li>
+        <ol>
+          <li><br></li>
+          <iframe src="예제모음/p149_예제12.html" width="700" height="400">P149 예제12번</iframe>
+        </ol>
+
+
+
+
+        <li>
+          <h2><a id="index 7">예제모음</a></h2>
+        </li>
+        <ol>
+          <li><iframe src="예제모음/pdf예제3.html" height="400" width="720">PDF예제3</iframe></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </ol>
+      </ol>
+      </ol>
+
+
+    </div>
+    <div id="sidebar">
+      목록
+      <ol>
+        <li><a href="#index 1">기능, 문법</a></li>
+        <li><a href="#index 2">선택자</a></li>
+        <li><a href="#index 3">삽입위치</a></li>
+        <li><a href="#index 4">속성</a></li>
+        <li><a href="#index 5">박스모델</a></li>
+        <li><a href="#index 6">시험문제</a></li>
+        <li><a href="#index 7">예제모음</a></li>
+        <li><a href="#index 8">플렉스</a></li>
+      </ol>
+    </div>
+
+    <div id="footer">
+      다른 월드로 &nbsp;:&nbsp;
+      <a href="01_html5.html">HTML5 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="02_css3.html">CSS3 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="03_javaScript.html">자바스크립트 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="04_파이썬.html">파이썬 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="05_java.html">자바 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="06_라즈베리파이4.html">라즈베리파이4 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="07.web_scraping.html">웹 스크래핑 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+    </div>
+  </div>
+
+</body>
+
+</html>

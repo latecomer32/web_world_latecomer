@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>지각생의 웹세상</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    pre {
+      font-family: "맑은 고딕";
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div id="page">
+    <div id="header">
+      <a href="00_index.html">지각생의 웹세상. </a>
+      자바스크립트 월드
+    </div>
+
+
+    <div id="main">
+      <ol type="I">
+        <li>
+          <h2><a id="index 1">자바 스크립트 소개</a></h2>
+        </li>
+        <ol>
+          <li>자바 스크립트 특징</li>
+          <ul>
+            <li>인터프리트 언어</li>
+            <li>동적 타이핑</li>
+            <li>구조적 프로그래밍 지원</li>
+            <li>객체 기반</li>
+            <li></li>
+          </ul>
+          <li>자바 스크립트 위치</li>
+          <ul>
+            <li>내부 자바스크립트</li>
+            <li>외부 자바스크립트</li>
+            <li>인라인 자바스크립트</li>
+          </ul>
+          <li>자료형</li>
+          <ul>
+            <li>수치형</li>
+            <li>문자열</li>
+            <li>부울형</li>
+            <li>객체형</li>
+            <li>undefined</li>
+          </ul>
+          <li>객체형</li>
+          <ul>
+            <li>var myCar={model:"bmz",color:"red",hp:100};</li>
+            <li></li>
+          </ul>
+          <li>연산자</li>
+          <img src="img/자바스크립트연산자.jpg" width="700"><br>
+          <img src="img/자바스크립트연산자2.jpg" width="700">
+          <li></li>
+          <li>오류처리</li>
+          <ul>
+            <li>try{}, catch{}</li>
+            <li>try블록에서 오류 발생하면 catch블록 처리</li>
+          </ul>
+        </ol>
+
+
+
+        <li>
+          <h2><a id="index 2">함수,이벤트,메서드</a></h2>
+        </li>
+        <ol>
+          <li>prompt()함수</li>
+          <ul>
+            <li>사용자에게 어떤사항을 알려주고 사용자가 답변을 입력할 수 있는 윈도우를 화면에 띄운다</li>
+            <img src="img/prompt함수예제.jpg" width="700">
+            <li>예제1
+              <pre>
+      &lt;script&gt;
+        var age=prompt("나이를 입력하세요", 디폴트값으로 설정할 내용)
+        &lt;/script&gt;
+      </pre>
+            <li>예제2 ; &lt;input id= ""&gt;로 변수 값 받기<br>
+              var x = document.getElementById("x").value;
+            </li>
+            <iframe src="예제모음/js_calculator.html" width="700" height="250"></iframe>
+            <br><br><br>
+            <li>예제3 ; &lt;input name= ""&gt;로 변수 값 받기<br>
+              var x = document.myform.x.value;</li>
+            <iframe src="예제모음/js_parse2.html" width="700" height="250"></iframe>
+            </li>
+          </ul>
+          <li>alert()함수</li>
+          <pre>
+            &gt;!DOCTYPE html&gt;
+&gt;html lang="ko"&gt;
+  &gt;head&gt;
+    &gt;meta charset="UTF-8" /&gt;
+    &gt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+    &gt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &gt;title&gt;obj_string&gt;/title&gt;
+    &gt;div id="remaining"&gt;&gt;/div&gt;
+    &gt;script&gt;
+      function checkID() {
+        var s = document.getElementById("id").value;
+        if (s.length &gt; 6) {
+          alert("아이디는 6글자 이상이어야 합니다.");
+        } else if (s.length &gt; 12) {
+          alert("아이디는 12글자 이하이어야 합니다.");
+        }
+      }
+    &gt;/script&gt;
+  &gt;/head&gt;
+  &gt;body&gt;
+    아이디: &gt;input type="text" id="id" size="10" /&gt;
+    &gt;button onclick="checkID()"&gt;검사&gt;/button&gt;
+  &gt;/body&gt;
+&gt;/html&gt;
+          </pre>
+
+          <li>confirm()함수</li>
+          <pre>
+            &lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;confirm 함수&lt;/title&gt;
+    &lt;script&gt;
+      var user = confirm("회 탈?");
+
+      if (user) {
+        //if (!user) {
+        //if (user == true) {
+        alert("ㅅㄱ");
+      } else {
+        alert("ㅅㅍ");
+      }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;
+          </pre>
+          <li>함수 모음 표</li>
+          <table border="1">
+            <tr>
+              <td>함수명</td>
+              <td>설명</td>
+            </tr>
+            <tr>
+              <td>prompt()</td>
+              <td>입력요구창 출력. 입력값에따라 True,False처리가능</td>
+            </tr>
+            <tr>
+              <td>parseInt()</td>
+              <td>문자열->숫자</td>
+            </tr>
+            <tr>
+              <td>document.write()</td>
+              <td>출력</td>
+            </tr>
+            <tr>
+              <td>string()</td>
+              <td>숫자->문자열</td>
+            </tr>
+            <tr>
+              <td>num=document.getElementById("x").value</td>
+              <td>폼 태그 안에 id=x를 쓰고있는 태그에서 받은 값 num에 전달</td>
+            </tr>
+            <tr>
+              <td>document.getElementById("x").value=sum</td>
+              <td>sum값을 폼태그 안 id=x를 쓰고있는 태그에 전달</td>
+            </tr>
+            <tr>
+              <td>num=document.getElementById("x").innerHTML</td>
+              <td>div 태그 안에 id=x를 쓰고있는 태그에서 받은 값 num에 전달</td>
+            </tr>
+            <tr>
+              <td>alert()</td>
+              <td>알람(경고) 창 출력</td>
+            </tr>
+            <tr>
+              <td>confirm()</td>
+              <td>사용자에게 알려주고 확인(true) or 취소(false) 요구 화면 출력</td>
+            </tr>
+            <tr>
+              <td>new Date()</td>
+              <td>현재 시스템 시간</td>
+            </tr>
+
+          </table>
+
+
+          <li></li>
+
+          <li>이벤트 모음 표</li>
+          <table border="1">
+            <tr>
+              <td>이벤트</td>
+              <td>설명</td>
+            </tr>
+            <tr>
+              <td>onclick=" "</td>
+              <td>클릭시 " " 발동</td>
+            </tr>
+            <tr>
+              <td>onload=""<br>
+                onunload=""</td>
+              <td>로드</td>
+            </tr>
+            <tr>
+              <td>onmouseover=""</td>
+              <td>마우스가 객체 위에 올라올때</td>
+            </tr>
+            <tr>
+              <td>onmouseout=""</td>
+              <td>마우스가 객체 위에서 벗어날 때</td>
+            </tr>
+            <tr>
+              <td>onmousedown=""</td>
+              <td>마우스가 누를때</td>
+            </tr>
+            <tr>
+              <td>onchange=""</td>
+              <td>입력필드 벗어나면 변경</td>
+            </tr>
+          </table>
+          <li>메서드 모음 표</li>
+          <table border="1">
+            <tr>
+              <td>메서드명</td>
+              <td>설명</td>
+            </tr>
+            <tr>
+              <td>toFixed(x)</td>
+              <td>소수 x자리까지만 표현</td>
+            </tr>
+            <tr>
+              <td>toPrecision</td>
+              <td></td>
+            </tr>
+          </table>
+
+        </ol>
+        <li>
+          <h2><a id="index 3">조건 문, 반복문, 배열</a></h2>
+        </li>
+        <ol>
+          <li>조건문</li>
+          <ul>
+            <li>if~else~if</li>
+            <li>if</li>
+            <li>if~else 예제</li>
+            <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ko"&gt;
+
+        &lt;head&gt;
+        &lt;meta charset="UTF-8" /&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+        &lt;title&gt;if 조건제어문&lt;/title&gt;
+        &lt;script&gt;
+        function func() {
+        var x = prompt("나이를 입력하세요!");
+        if (x &gt;= 20) {
+        alert("나이가 20세 이상이군요!");
+        } else {
+        alert("나이가 20세 미만이군요!");
+        }
+        }
+        &lt;/script&gt;
+        &lt;/head&gt;
+
+        &lt;body&gt;
+        &lt;h3&gt;나이를 입력하세요&lt;/h3&gt;
+        &lt;input type="button" value="입력" onclick="func()" /&gt;
+        &lt;/body&gt;
+
+        &lt;/html&gt;
+      </pre>
+            <li>switch 예제</li>
+            <pre>
+  &lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;switch조건제어문&lt;/title&gt;
+    &lt;script&gt;
+      var grade = prompt("학점을 입력하시오");
+      switch (grade) {
+        case "A":
+          alert("A학점");
+          break;
+        case "B":
+          alert("B학점");
+          break;
+        case "C":
+          alert("C학점");
+          break;
+        case "D":
+          alert("D학점");
+          break;
+        case "F":
+          alert("F학점");
+          break;
+        default:
+          alert("학점을 올바르게 입력하세요!");
+          break;
+      }
+    &lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+          </ul>
+          <li>반복문</li>
+          <ul>
+            <li>for</li>
+            <li>do~while</li>
+            <li>while</li>
+            <li>break문 (이미지 우측이 출력값)</li>
+            <img src="img/break문.png" width="700">
+
+            <li>continue문 (이미지 우측이 출력값)</li>
+            <img src="img/continue문.png" width="700">
+
+          </ul>
+          <li>배열 예제</li>
+          <ul>
+            <li>배열을 생성하는 2가지 방법</li>
+            <li>fruits = new Array("apple", "banana", "orange", "mango");</li>
+            <li>fruits = ["apple","banana","peach"];</li>
+          </ul>
+
+          <pre>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="ko"&gt;
+            &lt;head&gt;
+              &lt;meta charset="UTF-8" /&gt;
+              &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+              &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+              &lt;title&gt;배열&lt;/title&gt;
+              &lt;script&gt;
+                var fruits = new Array("apple", "banana", "orange", "mango");
+          
+                for (i = 0; i &lt; fruits.length; i++) {
+                  document.write(fruits[i] + "&lt;br&gt;");
+                }
+              &lt;/script&gt;
+            &lt;/head&gt;
+            &lt;body&gt;&lt;/body&gt;
+          &lt;/html&gt;
+        </pre>
+
+          <li>예제<br>
+            function func() {<br>
+            e = document.getElementById("test");<br>
+            e.style.color = "red";<br>
+            }</li>
+          <iframe src="예제모음/js_get_elem copy.html" width="700"></iframe>
+
+        </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <li>
+          <h2><a id="index 4">자바스크립트 객체</a></h2>
+        </li>
+        <ol>
+          <li>String객체</li>
+          <table border="1">
+            <tr>
+              <td>속성</td>
+              <td>설명</td>
+            </tr>
+            <tr>
+              <td>length</td>
+              <td>길이</td>
+            </tr>
+            <tr>
+              <td>prototype</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>constructor</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>메소드</td>
+              <td>
+                <설명/td> </tr> <tr>
+              <td>indexOf()</td>
+              <td>인덱스 위치</td>
+            </tr>
+            <tr>
+              <td>replace("a","b")</td>
+              <td>a를 b로 대체</td>
+            </tr>
+            <tr>
+              <td>concat()</td>
+              <td>문자열 붙이기</td>
+            </tr>
+            <tr>
+              <td>match()</td>
+              <td>문자열 찾아 출력,대소문자 구분 가능</td>
+            </tr>
+            <tr>
+              <td>split()</td>
+              <td>문자열 찾아 출력,대소문자 구분 가능</td>
+            </tr>
+          </table>
+          <li>Math객체</li>
+          <table border="1">
+            <tr>
+              <td>속성</td>
+              <td>설명</td>
+            </tr>
+            <tr>
+              <td>PI</td>
+              <td>파이상수</td>
+            </tr>
+            <tr>
+              <td>속성</td>
+              <td>설명</td>
+            </tr>
+            <tr>
+              <td>Ceil(x), floor(x)</td>
+              <td>실수를 정수로 올림, 내림 함수</td>
+            </tr>
+            <tr>
+              <td>max(x),min(y)</td>
+              <td>최대, 최소값</td>
+            </tr>
+            <tr>
+              <td>round(x)</td>
+              <td>반올림</td>
+            </tr>
+            <li>Array객체</li>
+            <table border="1">
+              <tr>
+                <td>속성</td>
+                <td>설명</td>
+              </tr>
+              <tr>
+                <td>length</td>
+                <td>길이</td>
+              </tr>
+              <tr>
+                <td>메소드</td>
+                <td>설명</td>
+              </tr>
+              <tr>
+                <td>pop()</td>
+                <td>마지막 항 빼냄</td>
+              </tr>
+              <tr>
+                <td>push()</td>
+                <td>마지막 항 넣음</td>
+              </tr>
+              <tr>
+                <td>shift()</td>
+                <td>첫 항 빼냄</td>
+              </tr>
+              <tr>
+                <td>sort()</tdㄴ>
+                <td>정렬</td>
+              </tr>
+            </table>
+        </ol>
+
+        <li>
+          <h2><a id="index 5">DOM과 입력 검증</a></h2>
+        </li>
+        <ol>
+          <li>문서 객체 모델 DOM(Document Object Model)</li>
+          <li>웹브라우저를 객체로 표현한 것을 BOM(Browser Object Model)</li>
+          <img src="img/DOM과 BOM.jpg" width="700">
+          <li>HTML 요소 찾는 법</li>
+          <ul>
+            <li>id로 찾기(class로 찾으면 안먹힐때가 있다.)<br>obj=document.getElementById("target");</li>
+            <li>태그 이름으로 찾기<br> obj=document.폼태그 name="값".태그의 name="값".속성;</li>
+          </ul>
+
+          <li>폼의 유효성 검증</li>
+          <iframe></iframe>
+          <li>정규식</li>
+
+          <li>jQuery</li>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/EQ48ZpnN3ug" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </ol>
+      </ol>
+    </div>
+    <div id="sidebar">
+      목록
+      <ol>
+        <li><a href="#index 1">소개</a></li>
+        <li><a href="#index 2"> 함수,이벤트,메서드</a></li>
+        <li><a href="#index 3">조건 문, <br>반복문,<br> 배열</a></li>
+        <li><a href="#index 4">객체</a></li>
+        <li><a href="#index 5">입력검증</a></li>
+
+      </ol>
+    </div>
+
+
+
+
+
+
+
+    <div id="footer">
+      다른 월드로 &nbsp;:&nbsp;
+      <a href="01_html5.html">HTML5 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="02_css3.html">CSS3 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="03_javaScript.html">자바스크립트 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="04_파이썬.html">파이썬 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="05_java.html">자바 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="06_라즈베리파이4.html">라즈베리파이4 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="07.web_scraping.html">웹 스크래핑 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+    </div>
+  </div>
+</body>
+
+</html>

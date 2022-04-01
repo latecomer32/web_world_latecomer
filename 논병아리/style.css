@@ -1,0 +1,143 @@
+* {
+  background-color: rgb(253, 253, 253);
+  font-family: "맑은 고딕";
+  color: rgb(0, 0, 0);
+}
+
+#page {
+  padding: 10px;
+  width: 800px;
+  margin: 40px auto;
+}
+
+#header {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  font-size: 18pt;
+}
+
+#main {
+  width: 100%;
+  line-height: 170%;
+  font-size: 11.7pt;
+  float: left;
+}
+
+#sidebar {
+  opacity: 0.7;
+  position: fixed;
+  top: 50;
+  right: 3px;
+  width: 300px;
+  height: 20px;
+  font-size: 9pt;
+  line-height: 190%;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 30px;
+  width: 100%;
+}
+
+@media screen and (max-width: 980px) {
+  #page {
+    width: 94%;
+    float: left;
+  }
+
+  #header {
+    width: 100%;
+  }
+
+  #main {
+    width: 93%;
+    float: left;
+  }
+
+  #sidebar {
+    width: 11%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #page {
+    width: 94%;
+    float: left;
+  }
+
+  #main {
+    width: 93%;
+    float: left;
+  }
+
+  #sidebar {
+    width: 12%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #header {
+    height: auto;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  #sidebar {
+    display: none;
+  }
+}
+
+#header,
+#main,
+#sidebar,
+#footer {
+  border: solid 1px rgb(221, 221, 221);
+}
+
+#header {
+  background-color: rgb(206, 233, 255);
+}
+
+#sidebar {
+  background-color: aliceblue;
+}
+
+#main {
+  background-color: rgb(227, 243, 252);
+}
+
+#footer {
+  background-color: rgb(255, 228, 218);
+}
+
+pre {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  text-align: center;
+}
+
+.font_footer {
+  font-size: 20pt;
+  font-family: "Courier New", Courier, monospace;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 230px;
+  font-size: 90px;
+}
+
+pre {
+  font-family: Arial, Helvetica, sans-serif;
+}

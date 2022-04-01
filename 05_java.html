@@ -1,0 +1,1935 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>지각생의 웹세상</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    pre {
+      font-family: "맑은 고딕";
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="page">
+    <div id="header">
+      <a href="00_index.html">지각생의 웹세상. </a>
+
+    </div>
+
+    <div id="main">
+      <ol type="I">
+        <li>
+          <h2><a id="index 1">자바 시작하기</a></h2>
+        </li>
+
+        <ol>
+          <li>JDK 설치하기 </li>
+
+          <ul>
+            <li>https://www.oracle.com (11버젼 수업용)</li>
+            <li>https://www.openjdk.java.net (회사용)</li>
+            <img src="img/java_install.png" width="700">
+            <p>JDK 설치 후 CMD에서 설치완료됐는지 체크</p>
+
+            <img src="img/java_cmd.png" width="700">
+            <p>번거로우니 이클립스를 설치해주자</p>
+
+          </ul>
+          <li> 환경설정</li>
+          <ul>
+            <li>내 pc , 설정, 고급시스템설정, 고급(탭), 환경변수, 시스템변수 란에 새로만들기, 변수이름 : JAVA_HOME, 디렉토리 찾아보기,<br>
+              자바 경로 찾아 넣어주기, 확인, 스크롤내려서 path ,편집 ,새로만들기, %JAVA_HOME%\bin, 확인, 확인, 확인</li>
+            <li>윈도우 7 : 시작, 제어판, 시스템및보안, 시스템, 고급시스템설정</li>
+            <li>윈도우 10: 검색, 제어판 입력 후 선택 , 윈도우7 과 동일</li>
+            <li></li>
+            <li></li>
+          </ul>
+          <li>이클립스 개발 환경 구축</li>
+          <ul>
+            <li>싸이트 : http://www.eclipse.org (eclipse-java-2021-03-R-win32-x86_64)</li>
+            <li>무료 오픈 소스 통합 개발 환경(IDE) 제공해주는 툴</li>
+            <li>[1단계] 프로젝트 생성</li>
+            <li></li>
+            <li></li>
+          </ul>
+          <li>변수</li>
+          <img src="img/java변수선언.png" width="700">
+          <p>변수 선언 규칙이다.</p>
+
+          <li>기본타입</li>
+          <img src="img/java기본타입.png" width="700">
+          <p>char(한글자 문자형)이 정수형 타입에 속한다!<br>
+            실수는 float보다 double을 더 자주 쓴다.</p>
+          <img src="img/java_long.jpg" width="700">
+          <p>long타입은 int타입 허용 범위 초과시 대입하려는 값 뒤에 L을 붙여줘야한다.<br>
+            실수는 float보다 double을 더 자주 쓴다.</p>
+          <img src="img/java정수5.png" width="700">
+          <p>타입별 허용범위 참고</p>
+          <img src="img/java정수4.png" width="700">
+          <p>자바 진수형 표기방식(2진수(진법),8진수(진법),10진수(진법),16진수(진법))</p>
+          <img src="img/java정수3.png" width="700">
+          <p>한글자는 작은따옴표</p>
+          <img src="img/java정수2.png" width="700">
+          <p>쌍따옴표는 한글자라도 문자열 표시이므로 char타입에 대입 불가함</p>
+          <img src="img/java정수.png" width="700">
+          <p>출력참고</p>
+          <img src="img/java실수3.png" width="700">
+          <p>실수 범위 참고.<br>
+            float a= 10.0f;(f표기해야함)<br>
+            double b= 10.0; (간결하고 허용범위 넓음)</p>
+          <img src="img/java실수2.png" width="700">
+          <p>5e2 같은 방식을 정규화된 표현이라 하는데 5.0x10^2방식이라 실수형타입</p>
+          <img src="img/java실수.png" width="700">
+          <li></li>
+        </ol>
+
+
+
+
+
+
+        <li>
+          <h2><a id="index 2">형 변환</a></h2>
+        </li>
+        <ol>
+          <li>자동 타입 변환</li>
+          <img src="img/p87.jpg" width="700"><br>
+          -자동 타입 변환 : 값 허용 범위가 작은 타입이 큰 타입으로 저장될 경우<br>
+          -기본 타입의 허용 범위 순서 알아 두기<br>
+          &nbsp;실수는 정수보다 크며 각 타입 내에서 허용범위 순에 따른다.<br>
+          <br>
+
+
+
+
+          <li>강제 타입 변환</li>
+          <a id="index 10"></a>
+          <caption>문자열을 기본 타입으로 강제 변환</caption>
+          <table border="1" width="700">
+            <tr>
+              <td>메소드(사용 예)</td>
+              <td>설명</td>
+            </tr>
+            <tr>
+              <td>String x="10";<br>byte value=Byte.parseByte(x);</td>
+              <td>문자열을 정수형으로 데이터 타입 변환</td>
+            </tr>
+            <tr>
+              <td>Short.parseShort(x)</td>
+              <td>문자열을 정수형으로 데이터 타입 변환</td>
+            </tr>
+            <tr>
+              <td>Integer.parseInt(x)</td>
+              <td>문자열을 정수형으로 데이터 타입 변환</td>
+            </tr>
+            <tr>
+              <td>Long.parseLong(x)</td>
+              <td>문자열을 정수형으로 데이터 타입 변환</td>
+            </tr>
+            <tr>
+              <td>Float.parseFloat(x)</td>
+              <td>문자열을 실수형으로 데이터 타입 변환</td>
+            </tr>
+            <tr>
+              <td>Double.parseDouble(x)</td>
+              <td>문자열을 실수형으로 데이터 타입 변환</td>
+            </tr>
+            <tr>
+              <td>Boolean.parseBoolean(x)</td>
+              <td>문자열을 논리형으로 데이터 타입 변환</td>
+            </tr>
+          </table>
+
+          <caption>기본 타입을 문자열로 강제 변환</caption>
+          <table border="1" width="700">
+            <tr>
+              <td>String str1=String.valueOf(10);</td>
+              <td>정수형을 문자열로</td>
+            </tr>
+            <tr>
+              <td>String str1=String.valueOf(3.14);</td>
+              <td>실수형을 문자열로</td>
+            </tr>
+            <tr>
+              <td>String str1=String.valueOf(true);</td>
+              <td>논리형을 문자열로</td>
+            </tr>
+          </table>
+          <br>
+
+
+          <img src="img/p87 (2).jpg" width="700"><br>
+          - 강제 타입 변환 : 값 허용 범위가 큰 타입이 작은 타입으로 저장될 경우<br>
+          - byte byteValue = (byte) intValue;<br>
+          ==>(byte)부분이 강제 타입 변환부분이다.
+
+          <img src="img/p87 (3).jpg" width="700"><br>
+          - 자동 타입 변환 예외 잘 알아두기<br>
+          - 범위를 알면 해결되는 예외 처리방식이긴 하다.<br>
+          <br>
+          <img src="img/p87 (4).jpg" width="700"><br>
+          - 강제 전환<br>
+          <br>
+          <img src="img/p87 (5).jpg" width="700"><br>
+          - 바이트+바이트는 바이트가 아니다 int로 써야 에러가 안남.<br>
+          <br>
+          <img src="img/p87 (6).jpg" width="700"><br>
+          - 피연산자 중 하나가 double 타입일 경우 피연산자도 double타입으로 자동 변환<br>
+          <br>
+          <img src="img/p87 (7).jpg" width="700"><br>
+          - 각각 계산되는 타입에 유의하여 볼 것.<br>
+          &nbsp;&nbsp; 제일 위는 정수형끼리 계산된 후 실수형으로 바뀜<br>
+          <br>
+          <img src="img/p87 (8).jpg" width="700"><br>
+          예제 참고<br>
+          <br>
+          <li>문자열 결합 연산</li>
+          <img src="img/p87 (9).jpg" width="700"><br>
+          +연산에서의 문자열 자동 타입 변환<br>
+          ==> 좌측부터 우측으로 데이터형을 봐가며 연산된다.<br>
+          <br>
+          <img src="img/2챕_문제1.jpg" width="700"><br>
+          <img src="img/2챕_문제5.jpg" width="700"><br>
+
+
+          <a id="index 11">char&키코드</a>
+
+          <img src="img/char_문제.png" width="700"><br>
+          <pre>
+          키코드로 작성할 경우 main void에 throws Exception 을 꼭 써줘야하며,
+          키코드로 소문자 a를 입력하고 엔터키를 누르면 엔터키의 키코드 값= 숫자 10,13이
+          입력되므로 
+          17,18번째 줄과 같이 키코드 2줄 을 입력해줘야 하며
+          28번을 else구문으로 마무리해버리면 키코드값 10,13이 else값에 포함되어
+          else구문 처리 시 출력되어 버린다.
+        </pre>
+
+        </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <li>
+          <h2><a id="index 3">입출력</a></h2>
+        </li>
+
+        <ol>
+
+
+          <li>모니터로 변수값 출력하기</li>
+          <table border="1" width="700">
+            <tr>
+              <td>메소드</td>
+              <td>설명</td>
+            </tr>
+            <tr>
+              <td>System.out.println(변수)</td>
+              <td>괄호 안 출력 및 줄 바꿈</td>
+            </tr>
+            <tr>
+              <td>System.out.print(변수)</td>
+              <td>괄호 안 출력</td>
+            </tr>
+            <tr>
+              <td>System.out.printf("형식문자열(%d %.2f %s",정수,실수(소수 둘째자리까지만), 문자열)</td>
+              <td>괄호 안 문자열 형식대로 내용 출력</td>
+            </tr>
+          </table>
+          <li>키보드에서 값 입력</li>
+          <table border="1" width="700">
+            <tr>
+              <td>메소드</td>
+              <td>설명</td>
+              <td>비고</td>
+            </tr>
+            <tr>
+              <td>int x =System.in.read()<br>
+                char ch = (char)System.in.read();<br>
+                //main void(String[] args)뒤에 throws Exception 적어주기<br>
+              </td>
+
+              <td>키보드에서 키를 입력할 때 프로그램에서 숫자로 된 키코드를 읽음</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Scanner sc = new Scanner(System.in);<br><br>
+                String a = sc.nextLine();<br><br>
+
+                int a = sc.nextInt();<br>
+                double a = sc.nextDouble();<br>
+                byte a = sc.nextBytes();<br>
+                long a = sc.nextLong();<br>
+                short a = sc.nextShort();<br>
+                float a = sc.nextFloat();<br><br>
+                int a = Integer.parseInt(sc.nextLine());<br>
+                double a = Double.parseDouble(sc.nextLine());<br>
+                = Byte.parseByte(sc.nextLine());<br>
+                = Short.parseShort(sc.nextLine());<br>
+                = Integer.parseInt(sc.nextLine());<br>
+                = Long.parseLong(sc.nextLine());<br>
+                = Float.parseFloat(sc.nextLine());<br>
+                = Double.parseDouble(sc.nextLine());<br>
+
+              </td>
+              <td>자바가 제공하는 Scanner클래스를 이용하면 통문자열 읽을 수 있음</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>System.out.printf("형식문자열(%d %.2f %s",정수,실수(소수 둘째자리까지만), 문자열)</td>
+              <td>괄호 안 문자열 형식대로 내용 출력</td>
+              <td></td>
+            </tr>
+          </table>
+
+          <img src="img/입력_키코드.jpg" width="700"><br>
+          ==>키코드 는 1개 문자만 입력 받을 수 있다는 한계점 때문에 잘 안쓰임.
+          <br>
+          <br>
+          <img src="img/키코드.png" width="700"><br>
+          ==>키코드 표
+          <br>
+          <br>
+          <img src="img/throws.jpg" width="700"><br>
+          ==>키코드를 쓸땐 void main 선언 후 throws Exception을 써줘야 한다.
+          <br>
+          <br>
+          <img src="img/입력_스캐너.jpg" width="700"><br>
+          ==>스캐너 입력 양식
+          <br>
+          <br>
+          <img src="img/입력_스캐너2.jpg" width="700"><br>
+          ==>스캐너를 쓸땐 라이브러리에서 3행문구를 필수로 불러와야 한다.
+          <br>
+          <br>
+          <img src="img/2챕_문제1.jpg" width="700"><br>
+          ==>short와 char모두 2byte크기 범위이지만 short는 음수값을 가지므로 자동타입변환 안된다.
+          <br>
+          <br>
+          <img src="img/2챕_문제5.jpg" width="700"><br>
+          ==> char 타입 다루는데 익숙하지 않음.
+          <br>
+          <br>
+          <img src="img/equals.jpg" width="700"><br>
+          ==>기본 타입 값 비교는 ==을 사용<br>
+          ==>문자열 비교는 equals() 메소드 사용<br>
+          ==>boolean re=str.equals("java");<br>
+          &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->(str1) 위 그림
+          오타<br>
+          <br>
+          <br>
+          <img src="img/equals2.jpg" width="700"><br>
+          ==>
+          <br>
+          <br>
+          <img src="img/상수.jpg" width="700"><br>
+          ==>상수 : final 타입 변수(대문자) = 상수값;
+          <br>
+          <br>
+          <li></li>
+          <li></li>
+        </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <li>
+          <h2><a id="index 4">연산자</a></h2>
+        </li>
+
+        <img src="img/123.jpg" width="700"><br><br>
+        <img src="img/124.jpg" width="700"><br><br>
+        <img src="img/125.jpg" width="700"><br><br>
+        <img src="img/126.jpg" width="700"><br><br>
+        <img src="img/140.jpg" width="700"><br><br>
+        <img src="img/141.jpg" width="700"><br><br>
+        <img src="img/143.jpg" width="700"><br><br>
+        <img src="img/150.jpg" width="700"><br><br>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <li>
+          <h2><a id="index 5">if, switch문</a></h2>
+        </li>
+        <ol>
+          <li>if문</li>
+          <pre>
+          if(조건식)
+          {실행문
+          실행문}
+
+          그러나 
+
+          if(조건식)
+          실행문
+          ==>실행문 한 줄일땐 중괄호 안 써도 된다.
+        </pre>
+          <li>if~else~문</li>
+          <li>if~, else if~, else~문</li>
+          <li>switch문</li>
+        </ol>
+        <img src="img/if_switch_key_code예제.png" width="700"><br><br>
+        <pre>
+* 랜덤(random) 메소드 = 무작위 메소드 = 난수
+--> 0.0 <= Math.random() < 1.0
+--> 0.0*45 <= Math.random()*45 <1.0*45
+--> (int)0.0 <= (int)Math.random()*45 <(int)45.0
+--> (int)Math.random()*45+1
+
+※ 아래 제시한 임의의 난수를 생성하는 랜덤메소드를 정의하여 보시오. 아래의 문제를 풀고 규칙을 찾아내어 이해하세요!
+
+문제1. 0부터 9까지 임의의 난수 생성 --> (int)Math.random()*10
+문제2. 1부터 10까지 임의의 난수 생성 --> (int)Math.random()*10+1
+문제3. 1부터 100까지 임의의 난수 생성 --> (int)Math.random()*100+1
+문제4. 100부터 500까지 임의의 난수 생성 --> (int)Math.random()*401+100
+문제5. 151부터 200까지 임의의 난수 생성 --> (int)Math.random()*50+151
+문제6. 50부터 100까지 임의의 난수 생성 --> (int)Math.random()*51+50
+문제7. 0부터 100까지 임의의 난수 생성 --> (int)Math.random()*101
+문제8. 0부터 99까지 임의의 난수 생성 --> (int)Math.random()*100
+문제9. 1부터 45까지 임의의 난수 생성 --> (int)Math.random()*45+1
+문제10. 1부터 3까지 임의의 난수 생성 --> (int)Math.random()*3+1
+문제11. 11부터 15까지 임의의 난수 생성 --> (int)Math.random()*5+11
+문제12. 1000부터 1200까지 임의의 난수 생성 --> (int)Math.random()*201+1000
+문제13. 200부터 350까지 임의의 난수 생성 --> (int)Math.random()*151+200
+문제14. 10부터 20까지 임의의 난수 생성 --> (int)Math.random()*11+10
+문제15. 900부터 999까지 임의의 난수 생성 --> (int)Math.random()*100+900
+문제16. 500부터 600까지 임의의 난수 생성 --> (int)Math.random()*101+500
+문제17. 1부터 15까지 임의의 난수 생성 --> (int)Math.random()*15+1
+문제18. 31부터 50까지 임의의 난수 생성 --> (int)Math.random()*20+31
+문제19. 1001부터 2000까지 임의의 난수 생성 --> (int)Math.random()*1000+1001
+문제20. 0부터 2까지 임의의 난수 생성 --> (int)Math.random()*3
+
+*조건식 만들기
+ch는 영문 대문자이다.
+ch>=65 && ch<=90 혹은 ch>='A' && ch<='Z'
+
+number는 숫자이다.
+number>=45&&number<=57 혹은 number>='0' && number <='9'
+</pre>
+
+        <li>
+          <h2><a id="index 6">for, while문</a></h2>
+        </li>
+
+        <img src="img/for문.jpg" width="700"><br>
+        자바식 for문 문법 봐두기<br><br>
+        <img src="img/dowhile문.jpg" width="700"><br>
+        do while문의 실행문은 최소 한번은 실행된다.<br><br>
+        <img src="img/break.jpg" width="700"><br>
+        별 내용 없음<br><br>
+        <img src="img/continue (2).jpg" width="700"><br>
+        별 내용 없음<br><br>
+        <img src="img/중첩 for문.png" width="700"><br>
+        살짝 어려운 문제<br><br>
+        <img src="img/4장핵심키워드.jpg" width="700"><br><br>
+
+        <li>
+          <h2><a id="index 7">참조 타입</a></h2>
+        </li>
+        <pre>
+          생성방식1- new객체 생성, 공간에 값으로 확보
+          int[] scores;
+          scores = new int[] { 83, 90, 87 };
+
+          생성방식2- new객체 생성, 공간에 값으로 확보
+          int scores[];
+          scores = new int[] { 83, 90, 87 };
+
+          생성방식3- 공간에 값으로 확보
+          int[] scores= {83,90,87};
+          String[] oldStrArray = { "java", "array", "copy" };
+          >>>>>>> 8e548a36273dbd1d8ef6ea0eb05a85fe50ac7db5
+
+          생성방식4 - 공간만 확보
+          int[] arr1 = new int[3];
+          String[] newStrArray = new String[5];
+
+          생성방식5 - 2차원 배열 공간만 확보
+          int[][] mathScores = new int[2][3];
+        </pre>
+        <img src="img/java_datatype.jpg" width="700"><br>
+        데이터 타입 종류<br><br>
+        <img src="img/java_문자열비교.jpg" width="700"><br>
+        문자열 비교는 무조건 .equals()<br><br>
+        <img src="img/java_문자열비교2.jpg" width="700"><br>
+        문자열 비교는 무조건 .equals() !!<br>
+        문자열 비교는 무조건 .equals() !!<br><br>
+        <img src="img/java_메모리.jpg" width="700"><br>
+        메모리 개념, 힙, JVM, 메소드<br><br>
+        <img src="img/java_null예외.jpg" width="700"><br>
+        null상태에서 참조할 경우 null pointer Exception 에러<br><br>
+        <img src="img/java_null값 대입.jpg" width="700"><br>
+        null값 대입 가능.<br>
+        자바는 메모리 자동 제거한다.<br><br>
+        <img src="img/java_null계산취급.jpg" width="700"><br>
+        null타입 계산할때 방식.<br><br>
+        <img src="img/java_new연산자.jpg" width="700"><br>
+        new는 객체 생성 연산자.<br><br>
+        <img src="img/java_배열특징.jpg" width="700"><br>
+        데이터를 연속된 공간에 나열하고 인덱스 부여한 자료구조.<br>
+        같은 타입의 데이터만 저장할 수 있음.<br>
+        한번 생성된 배열은 길이를 늘리거나 줄일 수 없음.<br><br>
+        <img src="img/java_배열선언.jpg" width="700"><br>
+        배열 선언,생성 방법<br><br>
+        <img src="img/java_배열생성.jpg" width="700"><br>
+        배열 생성 방법<br><br>
+        <img src="img/java_배열생성2.jpg" width="700"><br>
+        배열 생성 방법<br><br>
+        각 배열 초기화시 기초값<br>
+        ->정수 : 0<br>
+        ->실수 : 0.0<br>
+        ->문자열 : null<br><br>
+        <img src="img/java_명령라인_main()메소드의String[]args매개변수.jpg" width="700"><br>
+        어디 써먹는고?<br><br>
+        <img src="img/java_참조타입문자열비교.jpg" width="700"><br>
+        문자열 비교는 무조건 .equals() !!<br><br>
+        <img src="img/java_배열 복사.jpg" width="700"><br>
+        배열 복사<br><br>
+        <img src="img/java_향상된 for문.jpg" width="700"><br>
+        배열을 이용한 유용한 for문<br><br>
+        <img src="img/java_5.1핵심 포인트.jpg" width="700"><br>
+        키워드<br><br>
+
+
+
+
+        <li>
+          <h2><a id="index 8">클래스</a></h2>
+        </li>
+        생성자 : 클래스로부터 new연산자로 객체를 생성할때 호출되어 객체의 초기화를 담당<br><br>
+        <img src="img/기본생성자.jpg" width="700"><br>
+        ,249 기본생성자<br><br>
+        <img src="img/생성자선언.jpg" width="700"><br>
+        ,250 생성자 선언<br><br>
+        <img src="img/생성자필드초기화.jpg" width="700"><br>
+        ,251 생성자 필드 초기화<br><br>
+        <img src="img/생성자필드초기화2.jpg" width="700"><br>
+        ,252 생성자 필드 초기화 2<br><br>
+        생성자 오버로딩<br><br>
+        -매개변수를 달리하는 생성자 여러개 선언<br><br>
+        -외부에서 제공되는 다양한 데이터를 사용하여 객체화 하기 위해<br><br>
+        -매개 변수의 타입, 개수, 선언된 순서 달라야한다.<br><br>
+        -같은 경우 매개변수 이름만 바꾸는 것은 생성자 오버로딩 아님<br><br>
+        <img src="img/다른생성자호출this.jpg" width="700"><br>
+        ,256 다른 생성자 호출:this()<br><br>
+        <img src="img/메소드선언부.jpg" width="700"><br>
+        ,261 메소드 선언부<br><br>
+        <img src="img/리턴타입.jpg" width="700"><br>
+        ,262 리턴 타입<br><br>
+        ,메소드 이름<br><br>
+        -식별자 규칙에 따름<br><br>
+        -관례적 소문자<br><br>
+        -단어 혼합일경우 뒤이어 첫글자 대문자<br><br>
+        -ex)String getName() {...}<br><br>
+        <img src="img/메소드선언.jpg" width="700"><br>
+        ,265 메소드 선언 - 매개변수 개수를 모를때<br><br>
+        <img src="img/리턴문.jpg" width="700"><br>
+        ,266 리턴문<br><br>
+        <img src="img/리턴값없는메소드.jpg" width="700"><br>
+        ,267 리턴값 없는 메소드: void 일땐 return써도 되고 안써도 된다.<br><br>
+        <img src="img/메소드호출.jpg" width="700"><br>
+        ,268 메소드 호출(클래 내 외부에 따른 호출)<br><br>
+        <img src="img/메소드호출 (2).jpg" width="700"><br>
+        <img src="img/메소드호출 (3).jpg" width="700"><br>
+        ,269-270메소드 호출 그닥 안중요한듯?(그냥 쓰면됨)<br><br>
+        <img src="img/메소드호출외부.jpg" width="700"><br>
+        ,271 메소드 호출-외부<br><br>
+        <img src="img/메소드오버로딩.jpg" width="700"><br>
+        ,272메소드 오버로딩<br><br>
+
+        <img src="img/인스턴스,정적멤버.jpg" width="700"><br>
+        282_인스턴스멤버,정적멤버<br><br>
+        <img src="img/인스턴스멤버사용.jpg" width="700"><br>
+        283_인스턴스멤버의 사용<br><br>
+        <img src="img/인스턴스멤버,this.jpg" width="700"><br>
+
+        284_인스턴스 멤버와 this<br><br>
+        <img src="img/static개념.jpg" width="700"><br>
+        285_static의 개념(인스턴스멤버 혹은 정적 멤버 선택 기준)<br><br>
+        <img src="img/정적멤버,static.jpg" width="700"><br>
+        286_정적멤버와 static<br><br>
+        <img src="img/정적멤버사용.jpg" width="700"><br>
+        287_정적멤버의 사용<br><br>
+        <img src="img/정적메소드주의사항.jpg" width="700"><br>
+        289_정적메소드 선언 주의사항<br><br>
+        <img src="img/싱글톤.jpg" width="700"><br>
+        291_싱글톤_공부필요<br><br>
+        <img src="img/싱글톤예제.jpg" width="700"><br>
+        292_싱글톤 예제<br><br>
+        <img src="img/6.5핵심.jpg" width="700"><br>
+        294_6.5핵심<br><br>
+        <img src="img/패키지.jpg" width="700"><br>
+        300_패키지<br><br>
+        <img src="img/패키지선언.jpg" width="700"><br>
+        301_패키지선언<br><br>
+        <img src="img/import문.jpg" width="700"><br>
+        302_import문<br><br>
+        <img src="img/패키지호출.jpg" width="700"><br>
+        303_패키지호출<br><br>
+        <img src="img/접근제한자.jpg" width="700"><br>
+        304_접근 제한자<br><br>
+        <img src="img/클래스접근제한.jpg" width="700"><br>
+        305_클래스 접근제한<br><br>
+        <img src="img/생성자접근제한.jpg" width="700"><br>
+        309_생성자 접근제한<br><br>
+        <img src="img/필드와메서드접근제한.jpg" width="700"><br>
+        312_필드와 메서드 접근제한<br><br>
+
+        <img src="img/setter메소드.jpg" width="700"><br>
+        313_setter메소드<br><br>
+        <img src="img/getter메소드.jpg" width="700"><br>
+        314_getter메소드<br><br>
+        <img src="img/getter,setter자동생성.jpg" width="700"><br>
+        315_getter/setter메소드 자동 생성<br><br>
+        <img src="img/6.6핵심.jpg" width="700"><br>
+        316_6.6핵심<br><br>
+        <img src="img/정의.jpg" width="700"><br>
+        319_정의<br><br>
+
+
+
+        <li>
+          <h2><a id="index 9">상속</a></h2>
+        </li>
+        <img src="img/상속.jpg" width="700"><br>
+
+        323_상속<br><br>
+        <img src="img/클래스상속규칙.jpg" width="700"><br>
+
+        324_클래스 상속 규칙<br><br>
+        <img src="img/부모생성자호출.jpg" width="700"><br>
+
+        325_부모 생성자 호출(중요) : 문자열 비교할때 .equals() 쓰는 맥락 비슷.<br><br>
+        <img src="img/명시적부모생성자예제.jpg" width="700"><br>
+
+        326_명시적 부모 생성자 예제<br><br>
+
+        <img src="img/메소드오버라이딩.jpg" width="700"><br>
+        327_메소드오버라이딩(재정의)<br><br>
+        <img src="img/메소드예제.jpg" width="700"><br>
+        328_메소드 예제<br><br>
+        <img src="img/메소드오버라이딩+부모메서드호출.jpg" width="700"><br>
+        329_메소드오버라이딩하면서도 부모의 메서드는 그대로 호출하는법<br><br>
+        <img src="img/final클래스,final메소드.jpg" width="700"><br>
+        330_final클래스, final메소드<br><br>
+        <img src="img/7.1핵심.jpg" width="700"><br>
+        331_7.1핵심<br><br>
+        <img src="img/다형성=메소드재정의+타입변환.jpg" width="700"><br>
+        339_다형성 = 메소드 재정의 + 타입 변환<br><br>
+        <img src="img/부모자식간자동타입변환 (2).jpg" width="700"><br>
+        340_부모자식 간 자동 타입 변환(부모타입으로 변환됨)<br><br>
+        <img src="img/자동타입변환 (2).jpg" width="700"><br>
+        341_자동타입변환<br><br>
+        <img src="img/자동타입변환핵심 (2).jpg" width="700"><br>
+        342_자동타입변환 핵심_메소드 오버라이드<br><br>
+        <img src="img/상속_메서드오버라이드 (2).jpg" width="700"><br>
+        343_상속_메서드 오버라이드<br><br>
+        <img src="img/필드다형성 (2).jpg" width="700"><br>
+        344_필드의 다형성_예제를 보고 상속이 어떻게 이뤄졌는지 보기 (공부 필요)<br><br>
+        <img src="img/매개변수다형성 (2).jpg" width="700"><br>
+        345_매개 변수의 다형성_매개 변수를 부모 타입으로 선언<br><br>
+        <img src="img/매개변수다형성예제 (2).jpg" width="700"><br>
+        346_매개 변수의 다형성 예제<br><br>
+        <img src="img/강제타입변환 (2).jpg" width="700"><br>
+
+        347_강제 타입 변환 _new 연산자를 안쓰네?<br>
+        조건 : 자식->부모 자동 변환 후 다시 반대로 변환할때만 사용가능.<br><br>
+
+        <img src="img/instanceof연산자 (2).jpg" width="700"><br>
+
+        348_instanceof연산자 : 객체 instanceof 타입<br>
+        좌항 객체가 우항 타입으로 변환 가능하냐 조사할때 사용.<br><br>
+        <img src="img/7.2핵심.jpg" width="700"><br>
+
+        349_7.2핵심<br><br>
+
+
+
+
+        <li>
+          <h2><a id="index 13">추상클래스</a></h2>
+        </li>
+
+
+        353_추상 클래스
+        <br><img src="img/추상클래스.jpg" width="700"><br><br>
+        354_추상 클래스 용도
+        <br><img src="img/추상클래스용도.jpg" width="700"><br><br>
+        355_추상 클래스 선언
+        <br><img src="img/추상클래스선언.jpg" width="700"><br><br>
+        356_추상 메소드
+        <br><img src="img/추상메소드.jpg" width="700"><br><br>
+        357_7.3핵심 포인트
+        <br><img src="img/7.3핵심포인트.jpg" width="700"><br><br>
+        358_예제1
+        <br><img src="img/7.3예제1.jpg" width="700"><br><br>
+        359_예제2
+        <br><img src="img/7.3예제2.jpg" width="700"><br><br>
+        360_예제3
+        <br><img src="img/7.3예제3.jpg" width="700"><br><br>
+        361_7.3예제4
+        <br><img src="img/7.3예제4.jpg" width="700"><br><br>
+        362_7.3예제5
+        <br><img src="img/7.3예제5.jpg" width="700"><br><br>
+
+        <li>
+          <h2><a id="index 14">인터페이스</a></h2>
+        </li>
+
+        366_인터페이스
+        <br><img src="img/인터페이스.jpg" width="700"><br><br>
+        367_인터페이스 선언
+        <br><img src="img/인터페이스선언.jpg" width="700"><br><br>
+        368_인터페이스 상수 필드 선언
+        <br><img src="img/인터페이스상수필드선언.jpg" width="700"><br><br>
+        369_인터페이스 추상 메소드 선언
+        <br><img src="img/인터페이스추상메소드선언.jpg" width="700"><br><br>
+        370_구현(implements) 클래스
+        <br><img src="img/구현클래스.jpg" width="700"><br><br>
+        371_인터페이스와 구현 클래스 사용법
+        <br><img src="img/인터페이스와구현클래스사용법.jpg" width="700"><br><br>
+        372_다중 인터페이스 구현 클래스 (단수 구현 클래스 와 복수 인터페이스)
+        <br><img src="img/다중인터페이스.jpg" width="700"><br><br>
+        373_인터페이스 사용
+
+        -인터페이스는 필드, 매개 변수, 로컬 변수의 타입으로 선언가능
+        <br><img src="img/인터페이스사용.jpg" width="700"><br><br>
+
+
+        375_8.1핵심 포인트
+        <br><img src="img/8.1핵심포인트.jpg" width="700"><br><br>
+
+        380_인터페이스의 다형성
+        <br><img src="img/인터페이스다형성.jpg" width="700"><br><br>
+
+        381_자동 타입 변환
+        <br><img src="img/자동타입변환.jpg" width="700"><br><br>
+
+        382_필드의 다형성
+        <br><img src="img/필드의다형성.jpg" width="700"><br>
+        <pre>
+          package sec02.exam01;
+
+          public interface Tire {
+             public void roll();
+          }
+          
+          class HankookTire implements Tire{
+             @Override
+             public void roll() {
+                System.out.println(" ѱ  Ÿ ̾        ϴ .");
+             }
+          }
+          
+          class KumhoTire implements Tire{
+             @Override
+             public void roll() {
+                System.out.println("  ȣ Ÿ ̾        ϴ .");
+             }
+          }
+          
+          class Car{
+             Tire frontLeftTire = new HankookTire();
+             Tire frontRightTire = new HankookTire();
+             Tire backLeftTire = new HankookTire();
+             Tire backRightTire = new HankookTire();
+             
+             void run() {
+                frontLeftTire.roll();
+                frontRightTire.roll();
+                backLeftTire.roll();
+                backRightTire.roll();
+             }
+
+======================================================================
+package sec02.exam01;
+
+public class CarExample {
+
+   public static void main(String[] args) {
+      Car myCar = new Car();
+      myCar.run();
+      
+      myCar.frontLeftTire = new KumhoTire();
+      myCar.frontRightTire = new KumhoTire();
+      //myCar.backLeftTire = new KumhoTire();
+      //myCar.backRightTire = new KumhoTire();
+      myCar.run();
+   }
+
+}
+
+        </pre><br><br>
+
+        383_매개변수의 다형성
+        <br><img src="img/매개변수의다형성.jpg" width="700"><br>
+        <pre>
+          package sec02.exam02;
+
+          interface Vehicle {
+             // ߻   ޼   
+             public void run();
+          }
+          
+          class Bus implements Vehicle{
+             @Override
+             public void run() {
+                System.out.println("        ޸  ϴ .");
+             }
+          }
+          
+          class Taxi implements Vehicle{
+             @Override
+             public void run() {
+                System.out.println(" ýð   ޸  ϴ .");
+             }
+          }
+          
+          class Driver{
+             public void drive(Vehicle vehicle) //      ü       
+             {
+                vehicle.run();
+             }
+          }
+===================================================================
+          package sec02.exam02;
+
+public class DriverExample {
+
+   public static void main(String[] args) {
+      Driver driver = new Driver();
+      
+      Bus bus = new Bus();
+      Taxi taxi = new Taxi();
+      
+      driver.drive(bus);
+      driver.drive(taxi);
+   }
+
+}
+        </pre><br><br>
+
+        384_강제타입변환
+        <br><img src="img/구현클래스강제타입변환.jpg" width="700"><br><br>
+
+        385_객체타입확인
+        <br><img src="img/객체타입확인.jpg" width="700"><br><br>
+
+        386_인터페이스 상속
+        <br><img src="img/인터페이스상속.jpg" width="700"><br><br>
+
+        387_8.2핵심포인트
+        <br><img src="img/8.2핵심포인트.jpg" width="700"><br><br>
+
+
+
+        <li>
+          <h2><a id="index 15">중첩클래스와 중첩인터페이스</a></h2>
+        </li>
+
+        393_중첩클래스와 인터페이스
+        <br><img src="img/393_중첩클래스와 인터페이스.jpg" width="700"><br><br>
+        394_멤버,로컬 클래스
+        <br><img src="img/394_멤버,로컬 클래스.jpg" width="700"><br><br>
+        395_중첩클래스바이트코드파일(.class)
+        <br><img src="img/395_중첩클래스바이트코드파일.jpg" width="700"><br><br>
+        396_인스턴스멤버클래스1
+        <br><img src="img/396_인스턴스멤버클래스1.jpg" width="700"><br><br>
+        397_인스턴스멤버클래스2
+        <br><img src="img/397_인스턴스멤버클래스2.jpg" width="700"><br><br>
+        398_정적멤버클래스1
+        <br><img src="img/398_정적멤버클래스1.jpg" width="700"><br><br>
+        399_정적멤버클래스2
+        <br><img src="img/399_정적멤버클래스2.jpg" width="700"><br><br>
+        400_로컬클래스
+        <br><img src="img/400_로컬클래스.jpg" width="700"><br><br>
+        401_중첩클래스예시1
+        <br><img src="img/401_중첩클래스예시1.jpg" width="700"><br><br>
+        402_중첩클래스예시2
+        <br><img src="img/402_중첩클래스예시2.jpg" width="700"><br><br>
+        403_중첩클래스객체생성예시1
+        <br><img src="img/403_중첩클래스객체생성예시1.jpg" width="700"><br><br>
+        404_중첩클래스 접근제한_바깥필드와 메소드에서 사용제한1
+        <br><img src="img/404_중첩클래스 접근제한_바깥필드와 메소드에서 사용제한1.jpg" width="700"><br><br>
+        405_중첩클래스 접근제한_바깥필드와 메소드에서 사용제한2
+        <br><img src="img/405_중첩클래스 접근제한_바깥필드와 메소드에서 사용제한2.jpg" width="700"><br><br>
+        406_중첩클래스 접근제한_멤버클래스에서 사용제한1
+        <br><img src="img/406_중첩클래스 접근제한_멤버클래스에서 사용제한1.jpg" width="700"><br><br>
+        407_중첩클래스 접근제한_멤버클래스에서 사용제한2
+        <br><img src="img/407_중첩클래스 접근제한_멤버클래스에서 사용제한2.jpg" width="700"><br><br>
+        408_중첩클래스 접근제한_멤버클래스에서 사용제한3
+        <br><img src="img/408_중첩클래스 접근제한_멤버클래스에서 사용제한3.jpg" width="700"><br><br>
+        409_중첩클래스 접근제한_로컬클래스에서 사용제한1
+        <br><img src="img/409_중첩클래스 접근제한_로컬클래스에서 사용제한1.jpg" width="700"><br><br>
+        410_중첩클래스 접근제한_로컬클래스에서 사용제한2
+        <br><img src="img/410_중첩클래스 접근제한_로컬클래스에서 사용제한2.jpg" width="700"><br><br>
+        411_중첩클래스에서 바깥 클래스 참조1
+        <br><img src="img/411_중첩클래스에서 바깥 클래스 참조1.jpg" width="700"><br><br>
+        412_중첩클래스에서 바깥 클래스 참조2
+        <br><img src="img/412_중첩클래스에서 바깥 클래스 참조2.jpg" width="700"><br><br>
+        413_중첩클래스에서 바깥 클래스 참조3
+        <br><img src="img/413_중첩클래스에서 바깥 클래스 참조3.jpg" width="700"><br><br>
+        414_중첩 인터페이스
+        <br><img src="img/414_중첩 인터페이스.jpg" width="700"><br><br>
+        415_중첩 인터페이스 예시
+        <br><img src="img/415_중첩 인터페이스 예시.jpg" width="700"><br><br>
+        416_구현 클래스 예시
+        <br><img src="img/416_구현 클래스 예시.jpg" width="700"><br><br>
+        417_버튼 이벤트 처리
+        <br><img src="img/417_버튼 이벤트 처리.jpg" width="700"><br><br>
+        418_8.1 핵심 포인트
+        <br><img src="img/418_8.1 핵심 포인트.jpg" width="700"><br><br>
+
+
+        <li>
+          <h2><a id="index 16">익명 객체</a></h2>
+        </li>
+
+        425_익명객체1
+        <br><img src="img/425_익명객체1.jpg" width="700"><br><br>
+        426_익명객체2
+        <br><img src="img/426_익명객체2.jpg" width="700"><br><br>
+        427_익명 자식 객체 생성
+        <br><img src="img/427_익명 자식 객체 생성.jpg" width="700"><br><br>
+        428_자식 클래스 재사용하지 않고 특정 위치에서만 사용하는 경우1
+        <br><img src="img/428_자식 클래스 재사용하지 않고 특정 위치에서만 사용하는 경우1.jpg" width="700"><br><br>
+        429_자식 클래스 재사용하지 않고 특정 위치에서만 사용하는 경우2
+        <br><img src="img/429_자식 클래스 재사용하지 않고 특정 위치에서만 사용하는 경우2.jpg" width="700"><br><br>
+        430_자식 클래스 재사용하지 않고 특정 위치에서만 사용하는 경우3
+        <br><img src="img/430_자식 클래스 재사용하지 않고 특정 위치에서만 사용하는 경우3.jpg" width="700"><br><br>
+        431_익명 자식 객체에 새롭게 정의된 필드 및 메소드는 익명 자식 객체 내부에서만 사용되고 외부에서는 접근할 수 없음
+        <br><img src="img/431_익명 자식 객체에 새롭게 정의된 필드 및 메소드는 익명 자식 객체 내부에서만 사용되고 외부에서는 접근할 수 없음.jpg" width="700"><br><br>
+        432_예시-부모클래스
+        <br><img src="img/432_예시-부모클래스.jpg" width="700"><br><br>
+        433_예시-자식객체생성1
+        <br><img src="img/433_예시-자식객체생성1.jpg" width="700"><br><br>
+        434_예시-자식객체생성2
+        <br><img src="img/434_예시-자식객체생성2.jpg" width="700"><br><br>
+        435_예시-자식객체생성3
+        <br><img src="img/435_예시-자식객체생성3.jpg" width="700"><br><br>
+        436_익명 구현 객체 생성1
+        <br><img src="img/436_익명 구현 객체 생성1.jpg" width="700"><br><br>
+        437_익명 구현 객체 생성2
+        <br><img src="img/437_익명 구현 객체 생성2.jpg" width="700"><br><br>
+        438_익명 구현 객체 생성3
+        <br><img src="img/438_익명 구현 객체 생성3.jpg" width="700"><br><br>
+        439_예시-인터페이스,익명구현객체생성1
+        <br><img src="img/439_예시-인터페이스,익명구현객체생성1.jpg" width="700"><br><br>
+        440_예시-익명구현객체생성2
+        <br><img src="img/440_예시-익명구현객체생성2.jpg" width="700"><br><br>
+        441_예시-익명구현객체생성3
+        <br><img src="img/441_예시-익명구현객체생성3.jpg" width="700"><br><br>
+        442_예시_UI클래스
+        <br><img src="img/442_예시_UI클래스.jpg" width="700"><br><br>
+        443_클릭이벤트처리예시
+        <br><img src="img/443_클릭이벤트처리예시.jpg" width="700"><br><br>
+        444_예시-실행 클래스
+        <br><img src="img/444_예시-실행 클래스.jpg" width="700"><br><br>
+        445_익명 객체의 로컬 변수 사용1
+        <br><img src="img/445_익명 객체의 로컬 변수 사용1.jpg" width="700"><br><br>
+        446_익명 객체의 로컬 변수 사용2
+        <br><img src="img/446_익명 객체의 로컬 변수 사용2.jpg" width="700"><br><br>
+        447_익명 객체의 로컬 변수 사용3
+        <br><img src="img/447_익명 객체의 로컬 변수 사용3.jpg" width="700"><br><br>
+        448_9.2핵심포인트
+        <br><img src="img/448_9.2핵심포인트.jpg" width="700"><br><br>
+        449_확인문제1
+        <br><img src="img/449_확인문제1.jpg" width="700"><br><br>
+        450_확인문제2
+        <br><img src="img/450_확인문제2.jpg" width="700"><br><br>
+        451_확인문제3
+        <br><img src="img/451_확인문제3.jpg" width="700"><br><br>
+        452_확인문제4
+        <br><img src="img/452_확인문제4.jpg" width="700"><br><br>
+        453_확인문제5
+        <br><img src="img/453_확인문제5.jpg" width="700"><br><br>
+
+
+
+
+        <li>
+          <h2><a id="index 17">예외</a></h2>
+        </li>
+
+
+        457_예외정의
+
+        <br><img src="img/457_예외정의.jpg" width="700"><br><br>
+        458_예외
+
+        <br><img src="img/458_예외.jpg" width="700"><br><br>
+        459_예외 클래스1
+
+        <br><img src="img/459_예외 클래스1.jpg" width="700"><br><br>
+        460_예외 클래스2
+
+        <br><img src="img/460_예외 클래스2.jpg" width="700"><br><br>
+        491_예외 종류
+
+        <br><img src="img/491_예외 종류.jpg" width="700"><br><br>
+        470_10.1핵심 포인트
+
+        <br><img src="img/470_10.1핵심 포인트.jpg" width="700"><br><br>
+        477_예외 처리 코드
+
+        <br><img src="img/477_예외 처리 코드.jpg" width="700"><br><br>
+        478_예외 처리 코드 예시
+
+        <br><img src="img/478_예외 처리 코드 예시.jpg" width="700"><br><br>
+        479_예외 처리 코드 예시
+
+        <br><img src="img/479_예외 처리 코드 예시.jpg" width="700"><br><br>
+        480_예외 처리 코드
+
+        <br><img src="img/480_예외 처리 코드.jpg" width="700"><br><br>
+        481_예외 종류에 따른 처리 코드 - 다중 catch
+
+        <br><img src="img/481_예외 종류에 따른 처리 코드 - 다중 catch.jpg" width="700"><br><br>
+        482_예외 종류에 따른 처리 코드 예시
+
+        <br><img src="img/482_예외 종류에 따른 처리 코드 예시.jpg" width="700"><br><br>
+        483_예외 종류에 따른 처리 코드 - catch 순서
+
+        <br><img src="img/483_예외 종류에 따른 처리 코드 - catch 순서.jpg" width="700"><br><br>
+        484_예외 종류에 따른 처리 코드
+
+        <br><img src="img/484_예외 종류에 따른 처리 코드.jpg" width="700"><br><br>
+        485_예외 종류에 따른 처리 코드 예시 - catch 블록 순서
+
+        <br><img src="img/485_예외 종류에 따른 처리 코드 예시 - catch 블록 순서.jpg" width="700"><br><br>
+        486_예외 떠넘기기 - throws 키워드
+
+        <br><img src="img/486_예외 떠넘기기 - throws 키워드.jpg" width="700"><br><br>
+        487_예외 떠넘기기
+
+        <br><img src="img/487_예외 떠넘기기.jpg" width="700"><br><br>
+        488_예외 처리 떠넘기기 예시
+
+        <br><img src="img/488_예외 처리 떠넘기기 예시.jpg" width="700"><br><br>
+        489_10.2핵심포인트
+
+        <br><img src="img/489_10.2핵심포인트.jpg" width="700"><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <li>
+          <h2><a id="index 18">java.lang패키지</a></h2>
+        </li>
+
+        <br>
+        <br><img src="img/496_java.lang 패키지의 주요 클래스와 용도.jpg" width="700"><br>
+        496_java.lang 패키지의 주요 클래스와 용도<br>
+        <br><img src="img/497_API싸이트.jpg" width="700"><br>
+
+        497_API싸이트<br>
+        <br><img src="img/499_API싸이트 조회방법1.jpg" width="700"><br>
+
+        499_API싸이트 조회방법1<br>
+        <br><img src="img/500_API싸이트 조회방법2.jpg" width="700"><br>
+
+        500_API싸이트 조회방법2
+        <br>
+        <br><img src="img/504_Object는 최상위클래스.jpg" width="700"><br>
+        504_Object는 최상위클래스
+        <br>
+        <br><img src="img/505_객체 비교.jpg" width="700"><br>
+        505_객체 비교<br>
+        <br><img src="img/508_객체 해시코드.jpg" width="700"><br>
+
+        508_객체 해시코드<br>
+        <br><img src="img/512_hashCode()메소드 재정의 추가.jpg" width="700"><br>
+
+        512_hashCode()메소드 재정의 추가<br>
+        <br><img src="img/514_toString().jpg" width="700"><br>
+
+        514_toString()<br>
+        <br><img src="img/519_프로그램 소요시간 구하기.jpg" width="700"><br>
+
+        519_프로그램 소요시간 구하기<br>
+        <br><img src="img/520_Class 클래스.jpg" width="700"><br>
+
+        520_Class 클래스<br>
+        <br><img src="img/521_Class 클래스 예제.jpg" width="700"><br>
+
+        521_Class 클래스 예제<br>
+        <br><img src="img/522_Class 클래스 리소스 절대 경로 얻기.jpg" width="700"><br>
+
+        522_Class 클래스 리소스 절대 경로 얻기<br>
+        <br><img src="img/523_Class 클래스 리소스 절대 경로 얻기 예제.jpg" width="700"><br>
+
+        523_Class 클래스 리소스 절대 경로 얻기 예제<br>
+        <br><img src="img/524_String 생성자.jpg" width="700"><br>
+
+        524_String 생성자<br>
+        <br><img src="img/525_String 생성자 예시1.jpg" width="700"><br>
+
+        525_String 생성자 예시1<br>
+        <br><img src="img/526_String 생성자 예시2.jpg" width="700"><br>
+
+        526_String 생성자 예시2<br>
+        <br><img src="img/527_String 메소드.jpg" width="700"><br>
+
+        527_String 메소드<br>
+        <br><img src="img/528_문자추출_charAt()_문자 리턴.jpg" width="700"><br>
+
+        528_문자추출_charAt()_문자 리턴<br>
+        <br><img src="img/528_문자추출_charAt()예시.jpg" width="700"><br>
+
+        528_문자추출_charAt()예시<br>
+        <br><img src="img/532_바이트 배열로 변환_getBytes()_배열 리턴.jpg" width="700"><br>
+
+        532_바이트 배열로 변환_getBytes()_배열 리턴<br>
+        <br><img src="img/533_바이트 배열로 변환 예시1.jpg" width="700"><br>
+
+        533_바이트 배열로 변환 예시1<br>
+        <br><img src="img/534_바이트 배열로 변환 예시2.jpg" width="700"><br>
+
+        534_바이트 배열로 변환 예시2<br>
+        <br><img src="img/535_EUC-KR, UTF-8_한글 바이트차이.jpg" width="700"><br>
+
+        535_EUC-KR, UTF-8_한글 바이트차이<br>
+        <br><img src="img/536_문자열 찾기_indexOf()_정수 리턴.jpg" width="700"><br>
+
+        536_문자열 찾기_indexOf()_정수 리턴<br>
+        <br><img src="img/537_문자열 찾기 예시.jpg" width="700"><br>
+
+        537_문자열 찾기 예시<br>
+        <br><img src="img/538_문자열 길이_length().jpg" width="700"><br>
+
+        538_문자열 길이_length()<br>
+        <br><img src="img/540_문자열 대치_replace().jpg" width="700"><br>
+
+        540_문자열 대치_replace()<br>
+        <br><img src="img/541_문자열 대치_replace() 예시.jpg" width="700"><br>
+
+        541_문자열 대치_replace() 예시<br>
+        <br><img src="img/542_문자열 잘라내기_substring().jpg" width="700"><br>
+
+        542_문자열 잘라내기_substring()<br>
+        <br><img src="img/543_문자열 잘라내기_substring()_예시.jpg" width="700"><br>
+
+        543_문자열 잘라내기_substring()_예시<br>
+        <br><img src="img/544_알파벳 소, 대문자 변경(toLowerCase(),toUpperCase()).jpg" width="700"><br>
+
+        544_알파벳 소, 대문자 변경(toLowerCase(),toUpperCase())<br>
+        <br><img src="img/544_알파벳 소, 대문자 변경(toLowerCase(),toUpperCase())예시.jpg" width="700"><br>
+
+        544_알파벳 소, 대문자 변경(toLowerCase(),toUpperCase())예시<br>
+        <br><img src="img/546_문자열 앞뒤 공백 잘라내기_trim().jpg" width="700"><br>
+
+        546_문자열 앞뒤 공백 잘라내기_trim()<br>
+        <br><img src="img/547_문자열 앞뒤 공백 잘라내기_trim()예시.jpg" width="700"><br>
+
+        547_문자열 앞뒤 공백 잘라내기_trim()예시
+        <br>
+        <br><img src="img/548_문자열 변환_valueOf().jpg" width="700"><br>
+
+        548_문자열 변환_valueOf()<br>
+        <br><img src="img/549_포장객체.jpg" width="700"><br>
+
+        549_포장객체<br>
+        <br><img src="img/550_박싱과 언박싱.jpg" width="700"><br>
+
+        550_박싱과 언박싱<br>
+        <br><img src="img/551_언박싱.jpg" width="700"><br>
+
+        551_언박싱<br>
+        <br><img src="img/552_박싱과 언박싱 예시.jpg" width="700"><br>
+
+        552_박싱과 언박싱 예시<br>
+        <br><img src="img/553_자동 박싱과 언박싱.jpg" width="700"><br>
+
+        553_자동 박싱과 언박싱<br>
+        <br><img src="img/554_자동 박싱과 언박싱 예시.jpg" width="700"><br>
+
+        554_자동 박싱과 언박싱 예시<br>
+        <br><img src="img/555_문자열을 기본 타입 값으로 변환.jpg" width="700"><br>
+
+        555_문자열을 기본 타입 값으로 변환<br>
+        <br><img src="img/556_포장 값 비교.jpg" width="700"><br>
+
+        556_포장 값 비교<br>
+        <br><img src="img/557_포장 값 비교 예시.jpg" width="700"><br>
+
+        557_포장 값 비교 예시<br>
+        <br><img src="img/558_Math클래스.jpg" width="700"><br>
+
+        558_Math클래스<br>
+        <br><img src="img/559_Math클래스는 정적 메소드.jpg" width="700"><br>
+
+        559_Math클래스는 정적 메소드<br>
+        <br><img src="img/564_11.1핵심 포인트.jpg" width="700"><br>
+
+        564_11.1핵심 포인트
+        <br>
+        <br><img src="img/573_java.utill 패키지.jpg" width="700"><br>
+        573_java.utill 패키지
+        <br>
+        <br><img src="img/575_Date 클래스.jpg" width="700"><br>
+        575_Date 클래스<br>
+        <br><img src="img/576_Date API.jpg" width="700"><br>
+
+        576_Date API<br>
+        <br><img src="img/577_Date 예시.jpg" width="700"><br>
+
+        577_Date 예시<br>
+        <br><img src="img/578_Calendar 클래스.jpg" width="700"><br>
+
+        578_Calendar 클래스<br>
+        <br><img src="img/579_Calendar 예시1.jpg" width="700"><br>
+
+        579_Calendar 예시1<br>
+        <br><img src="img/580_Calendar 예시2.jpg" width="700"><br>
+
+        580_Calendar 예시2<br>
+        <br><img src="img/581_Calendar 예시3.jpg" width="700"><br>
+
+        581_Calendar 예시3<br>
+        <br><img src="img/582_11.2핵심 포인트.jpg" width="700"><br>
+
+        582_11.2핵심 포인트
+
+
+
+
+        <br><br><img src="img/587_프로세서, 프로세스, 스레드 정의.jpg" width="700"><br>
+
+        587_프로세서, 프로세스, 스레드 정의
+        <br><br><img src="img/588_프로세스.jpg" width="700"><br>
+        588_프로세스
+        <br><br><img src="img/589_스레드.jpg" width="700"><br>
+        589_스레드
+        <br><br><img src="img/590_메인스레드.jpg" width="700"><br>
+        590_메인스레드
+        <br><br><img src="img/591_메인과 작업 스레드.jpg" width="700"><br>
+        591_메인과 작업 스레드
+        <br><br><img src="img/592_작업 스레드.jpg" width="700"><br>
+        592_작업 스레드
+        <br><br><img src="img/593_Thread 클래스로부터 직접 생성.jpg" width="700"><br>
+        593_Thread 클래스로부터 직접 생성
+        <br><br><img src="img/594_Runnable은 인터페이스.jpg" width="700"><br>
+        594_Runnable은 인터페이스
+        <br><br><img src="img/595_start()메소드는 run()메소드 호출.jpg" width="700"><br>
+        595_start()메소드는 run()메소드 호출
+        <br><br><img src="img/596_메인 스레드 예시.jpg" width="700"><br>
+        596_메인 스레드 예시
+        <br><br><img src="img/597_메인,작업 스레드 예시1.jpg" width="700"><br>
+        597_메인,작업 스레드 예시1
+        <br><br><img src="img/598_메인,작업 스레드 예시2.jpg" width="700"><br>
+        598_메인,작업 스레드 예시2
+        <br><br><img src="img/599_Thread생성 2번째방법_ 하위 클래스로부터 생성.jpg" width="700"><br>
+        599_Thread생성 2번째방법: 하위 클래스로부터 생성
+        <br><br><img src="img/601_예시.jpg" width="700"><br>
+        601_예시
+        <br><br><img src="img/602_예시.jpg" width="700"><br>
+        602_예시
+        <br><br><img src="img/603_작업 스레드 생성과 실행.jpg" width="700"><br>
+        603_작업 스레드 생성과 실행
+        <br><br><img src="img/604_예시.jpg" width="700"><br>
+        604_예시
+        <br><br><img src="img/605_예시.jpg" width="700"><br>
+        605_예시
+        <br><br><img src="img/606_예시.jpg" width="700"><br>
+        606_예시
+        <br><br><img src="img/607_동기화 메소드.jpg" width="700"><br>
+        607_동기화 메소드
+        <br><br><img src="img/608_메인 스레드_예시.jpg" width="700"><br>
+        608_메인 스레드_예시
+        <br><br><img src="img/609_공유객체_예시.jpg" width="700"><br>
+        609_공유객체_예시
+        <br><br><img src="img/610_작업스레드1_예시.jpg" width="700"><br>
+        610_작업스레드1_예시
+        <br><br><img src="img/611_작업스레드2_예시.jpg" width="700"><br>
+        611_작업스레드2_예시
+        <br><br><img src="img/612_해결책_동기화 메소드_synchronized.jpg" width="700"><br>
+        612_해결책_동기화 메소드_synchronized
+        <br><br><img src="img/613_수정예시.jpg" width="700"><br>
+        613_수정예시
+        <br><br><img src="img/614_동기화메소드.jpg" width="700"><br>
+        614_동기화메소드
+        <br><br><img src="img/615_12.1핵심포인트.jpg" width="700"><br>
+        615_12.1핵심포인트
+        <br><br><img src="img/621_스타트 후 실행디기 후 실행.jpg" width="700"><br>
+        621_스타트 후 실행디기 후 실행
+        <br><br><img src="img/622_스레드 상태.jpg" width="700"><br>
+        622_스레드 상태
+        <br><br><img src="img/623_스레드 상태 제어.jpg" width="700"><br>
+        623_스레드 상태 제어
+        <br><br><img src="img/624_스레드 상태 제어.jpg" width="700"><br>
+        624_스레드 상태 제어
+        <br><br><img src="img/625_예시.jpg" width="700"><br>
+        625_예시
+        <br><br><img src="img/626_스레드 안전종료.jpg" width="700"><br>
+        626_스레드 안전종료
+        <br><br><img src="img/627_예시.jpg" width="700"><br>
+        627_예시
+        <br><br><img src="img/628_예시.jpg" width="700"><br>
+        628_예시
+        <br><br><img src="img/629_스레드 상태 제어.jpg" width="700"><br>
+        629_스레드 상태 제어
+        <br><br><img src="img/630_예시.jpg" width="700"><br>
+        630_예시
+        <br><br><img src="img/631_예시.jpg" width="700"><br>
+        631_예시
+        <br><br><img src="img/632_스레드상태제어.jpg" width="700"><br>
+        632_스레드상태제어
+        <br><br><img src="img/633_예시.jpg" width="700"><br>
+        633_예시
+        <br><br><img src="img/634_12.2핵심포인트.jpg" width="700"><br>
+        634_12.2핵심포인트
+
+        <br><br><img src="img/1_스레드생성.jpg" width="700"><br>
+        보강
+        <br><br><img src="img/2_스레드스케쥴링.jpg" width="700"><br>
+        보강
+        <br><br><img src="img/3_우선순위가다른스레드실행.jpg" width="700"><br>
+        보강
+        <br><br><img src="img/8_wait, notify, notifyall에의한실행순서동기화.jpg" width="700"><br>
+        보강
+        <br><br><img src="img/9_실행순서 동기화 예제.jpg" width="700"><br>
+        보강
+
+        아래는 시험문제
+        <pre>
+        package thread.ex;
+
+class Cal {
+   private int count;
+   private int sleep;
+
+   public synchronized void setCount(int count, int sleep) {
+      this.count = count;
+      this.sleep = sleep;
+
+      try {
+         for (int i = 0; i <= 3; i++) {
+            System.out.println(Thread.currentThread().getName() + ": " + this.count);
+            this.count += 1;
+            double time1 = System.nanoTime();
+            Thread.sleep(this.sleep);
+            double time2 = System.nanoTime();
+            System.out.println("시간:" + (time2 - time1) / 1000000000);
+         }
+      } catch (Exception e) {
+      }
+   }
+}
+
+class Thread0 extends Thread {
+   private Cal cal;
+
+   public void setCal(Cal cal) {
+      this.setName("thread0");
+      this.cal = cal;
+   }
+
+   public void run() {
+
+      cal.setCount(100, 1000);
+   }
+}
+
+class Thread1 extends Thread {
+   private Cal cal;
+
+   public void setCal(Cal cal) {
+      this.setName("thread1");
+      this.cal = cal;
+   }
+
+   public void run() {
+
+      cal.setCount(100, 2000);
+   }
+}
+
+class Thread2 extends Thread {
+   private Cal cal;
+
+   public void setCal(Cal cal) {
+      this.setName("thread2");
+      this.cal = cal;
+   }
+
+   public void run() {
+
+
+      cal.setCount(100, 3000);
+   }
+}
+
+public class array_thread {
+
+   public static void main(String[] args) {
+      Cal cal = new Cal();
+
+      
+      Thread0 thread0 = new Thread0();
+      thread0.setCal(cal);
+
+      Thread1 thread1 = new Thread1();
+      thread1.setCal(cal);
+
+      Thread2 thread2 = new Thread2();
+      thread2.setCal(cal);
+
+      try {
+         thread0.start();
+         thread0.join();
+         thread1.start();
+         thread1.join();
+         thread2.start();
+         thread2.join();
+      } catch (Exception e) {
+
+      }
+
+   }
+
+}
+</pre>
+
+
+
+        <li>
+
+          <h2><a id="index 19">컬렉션 프레임워크</a></h2>
+        </li>
+        <pre>
+  package quiz.ex02;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Employee{
+   ArrayList&lt;String&gt; Name = new ArrayList&lt;String&gt;();
+   ArrayList&lt;String&gt; departmentName = new ArrayList&lt;String&gt;();
+   ArrayList&lt;String&gt; Position = new ArrayList&lt;String&gt;();
+   ArrayList&lt;String&gt; Tel = new ArrayList&lt;String&gt;();
+}
+
+public class Employeee {
+   public static void main(String[] args) throws Exception {
+   Scanner sc = new Scanner(System.in);
+   Employee em=new Employee();
+   System.out.println("*** 메뉴 ***");
+   System.out.println("1. 직원 추가");
+   System.out.println("2. 직원 조회");
+   System.out.println("3. 직원 삭제");
+   System.out.println("4. 종료");
+   int num=0;
+
+   while(num!=4) {
+      System.out.println("숫자 입력:");
+      num=sc.nextInt();
+      String str;
+      switch(num) {
+      case 1:
+         System.out.println("직원 추가");
+         System.out.println("이름 입력");
+         em.Name.add(sc.next());
+         System.out.println("부서 입력");
+         em.departmentName.add(sc.next());
+         System.out.println("직급 입력");
+         em.Position.add(sc.next());
+         System.out.println("연락처 입력");
+         em.Tel.add(sc.next());
+         break;
+      case 2:
+         System.out.println("직원 조회");
+         System.out.println("직원이름:"+em.Name);
+         System.out.println("직원부서:"+em.departmentName);
+         System.out.println("직원직급:"+em.Position);
+         System.out.println("직원연락처:"+em.Tel);
+         break;
+      case 3:
+         System.out.println("직원 삭제");
+         System.out.println("이름 입력");
+         str = sc.next();
+         for(int i=0; i&lt;em.Name.size();i++) {
+            if( str.equals(em.Name.get(i)))
+            {
+               em.Name.remove(i);
+               em.departmentName.remove(i);
+               em.Position.remove(i);
+               em.Tel.remove(i);
+            }
+         }
+         break;
+      case 4:
+         System.out.println("시스템을 종료합니다.");
+         System.exit(0);
+         break;
+      }
+   }
+   }
+}
+</pre>
+
+        <li>
+          <h2><a id="index 20">Thread</a></h2>
+        </li>
+        <pre>
+  package thread.ex;
+
+class Cal {
+	private int count;
+	private int sleep;
+
+	public synchronized void setCount(int count, int sleep) {
+		this.count = count;
+		this.sleep = sleep;
+
+		try {
+			for (int i = 0; i <= 3; i++) {
+				System.out.println(Thread.currentThread().getName() + ": " + this.count);
+				this.count += 1;
+				double time1 = System.nanoTime();
+				Thread.sleep(this.sleep);
+				double time2 = System.nanoTime();
+				System.out.println("시간:" + (time2 - time1) / 1000000000);
+			}
+		} catch (Exception e) {
+		}
+	}
+}
+
+class Thread0 extends Thread {
+	private Cal cal;
+
+	public void setCal(Cal cal) {
+		this.setName("thread0");
+		this.cal = cal;
+	}
+
+	public void run() {
+
+		cal.setCount(100, 1000);
+	}
+}
+
+class Thread1 extends Thread {
+	private Cal cal;
+
+	public void setCal(Cal cal) {
+		this.setName("thread1");
+		this.cal = cal;
+	}
+
+	public void run() {
+
+		cal.setCount(100, 2000);
+	}
+}
+
+class Thread2 extends Thread {
+	private Cal cal;
+
+	public void setCal(Cal cal) {
+		this.setName("thread2");
+		this.cal = cal;
+	}
+
+	public void run() {
+
+		cal.setCount(100, 3000);
+	}
+}
+
+public class array_thread {
+
+	public static void main(String[] args) {
+		Cal cal = new Cal();
+
+		
+		Thread0 thread0 = new Thread0();
+		thread0.setCal(cal);
+
+		Thread1 thread1 = new Thread1();
+		thread1.setCal(cal);
+
+		Thread2 thread2 = new Thread2();
+		thread2.setCal(cal);
+
+		try {
+			thread0.start();
+			thread0.join();
+			thread1.start();
+			thread1.join();
+			thread2.start();
+			thread2.join();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+}
+</pre>
+
+        <li>
+          <h2><a id="index 21">입출력 스트림</a></h2>
+        </li>
+        <pre>
+
+package exam;
+import java.io.BufferedReader;
+import java.io.FileWriter;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.Writer;
+
+public class ex03 {
+
+   public static void main(String[] args) throws Exception {
+      InputStream is = System.in;
+      Reader reader = new InputStreamReader(is);
+      BufferedReader br = new BufferedReader(reader);
+      Writer writer = new FileWriter("d:/JAVA/phonebook.txt");
+      while(true) {
+         System.out.print("이름(name): ");
+         String lineStr1 = br.readLine();
+         System.out.print("전화번호(tel): ");
+         String lineStr2 = br.readLine();
+         System.out.print("주소(addr)): ");
+         String lineStr3 = br.readLine();
+         writer.write("이름(name): " + lineStr1);
+         writer.write("\r\n");
+         writer.write("전화번호(tel): " + lineStr2);
+         writer.write("\r\n");
+         writer.write("주소(addr)): " + lineStr3);
+         writer.write("\r\n");
+      
+         System.out.print("그만 입력하시겠습니까(y/n)?: ");   
+         String lineStr6 = br.readLine();
+         
+         if(lineStr6.equals("y") || lineStr6.equals("Y")) break;
+         else if (lineStr6.equals("n") || lineStr6.equals("N")) continue;
+         else { 
+            System.out.println("다시 입력하세요."); 
+         }
+      }
+      writer.flush();
+      writer.close();
+   }
+
+}
+        </pre>
+        <li>
+          <h2><a id="index 22">코딩테스트</a></h2>
+        </li>
+        <li>
+          <h2><a id="index 23">비트연산자</a></h2>
+        </li>
+        <pre>
+            https://coding-factory.tistory.com/521
+            1)비트 이동 연산자(<<. >>, >>>) 
+            x << y	정수 x의 각 비트를 y만큼 왼쪽으로 이동시킵니다. (빈자리는 0으로 채워집니다.)
+            x >> y	정수 x의 각 비트를 y만큼 오른쪽으로 이동시킵니다. (빈자리는 정수 a의 최상위 부호비트와 같은 값으로 채워집니다.  
+            x >>> y	정수 x의 각 비트를 y만큼 오른쪽으로 이동시킵니다. (빈자리는 0으로 채워집니다.)
+  
+            2)<<예시
+            2<< 3 은 2를 32비트로 분해한다음 왼쪽으로 3비트를 이동시키는 연산입니다.
+             비트를 왼쪽으로 3비트 이동할때 맨 왼쪽 3비트는 밀려서 버려지게되고 맨 오른쪽에는 0으로 채워집니다.
+              2진수로 표현된 2을 왼쪽으로 3칸이동시키면 16이됩니다.
+            
+            3)>>예시
+              16 >> 3 은 16을 32비트로 분해한다음 오른쪽으로 3비트를 이동시키는 연산입니다.
+               비트를 오른쪽으로 3비트 이동할때 맨 오른쪽 3비트는 밀려서 버려지게되고 맨 왼쪽에는 최상위 부호비트와 동일한 값으로 채워지게 됩니다.
+                즉 피 연산자가 음수라면 빈공간은 1로 채워지게되고 양수라면 0으로 채워집니다.
+                 2진수로 표현된 16을 오른쪽으로 3칸이동시키면 좌측에는 0이 채워지게 되어 2가되고 -16을 오른쪽으로 3칸이동시키면 좌측에는 1이 채워지게 되어 -2가 됩니다.
+           4)>>>예시
+              >>> 연산은 오직 자바에만 있는 연산이며 >>와 기본원리는 같습니다.
+               비트를 오른쪽으로 3비트 이동할때 맨 오른쪽 3비트는 밀려서 버려지게됩니다.
+                하지만 >> 연산과는 다르게 맨 왼쪽에는 최상위 부호비트와 관계없이 무조건 0으로만 채워지게됩니다.
+                 앞자리가 0으로만 채워지기에 결과값은 무조건 양수로만 나타나게 됩니다.
+            -16>>>3
+            의 값은 536870910
+            왜냐면
+            11111111 11111111 11111111 1111000 -16
+            00011111 11111111 11111111 1111110 536870910
+  
+  
+              5)비트 논리 연산자(&, |, ^, ~) 
+                 &	AND	두 비트 모두 1일 경우에만 연산 결과가 1
+                 |	OR	두 비트 중 하나만 1일 경우에만 연산결과가 1
+                 ^	XOR	두 비트중 하나는 1이고 다른 하나가 0일경우에만 연산결과가 1
+                 ~	NOT	비트 반전(보수)
+            
+                </pre>
+        <li>
+          <h2><a id="index 24">자바 유용한 메서드</a></h2>
+        </li>
+        1. length
+        - arrays(int[], double[], String[])
+        - length는 배열의 길이를 알고자 할때 사용된다.
+
+
+
+        2. length()
+        - String related Object(String, StringBuilder etc)
+        - length()는 문자열의 길이를 알고자 할때 사용된다.
+
+
+        3. size()
+        - Collection Object(ArrayList, Set etc)
+        - size()는 컬렉션프레임워크 타입의 길이를 알고자 할때 사용된다.
+
+
+
+        .indexOf( "찾을 특정 문자" , "시작할 위치" ) 이런식으로 사용해 주면된다.
+        "-1" 을 반환하는 이유는 위에서 설명 했다시피 찾지를 못했기 때문에 그런것이다.
+
+        lastindexOf() 는 특정 문자나 문자열이 뒤에서부터 처음 발견되는 인덱스를 반환하며
+        만약 찾지 못했을 경우 "-1"을 반환합니다.
+
+
+
+        숫자 → 이진수(문자열)로 변환
+        1
+        Integer.toBinaryString(num);
+
+        num은 일반 숫자도 가능하지만, HEX 형태로 표기도 가능하다.
+        1
+        ex) Integer.toBinaryString(0xFFFF); //1111111111111111
+
+
+
+
+
+
+
+
+        <li>
+          <h2><a id="index 12">개인퀴즈</a></h2>
+        </li>
+
+        <pre>
+
+1.스페이바를 눌러 배열의 길이를 정하세요(눌린 횟수만큼 배열의 길이)
+2.길이를 정했으면 엔터를 눌러주세요.
+                  
+배열의 길이는 18입니다.
+array=[3,1,7,6,4,1,6,1,7,1,6,1,6,4,9,10,7,4]
+1.배열 전체 범위 중 출력하고 싶은 구간에 해당하는 시작과 끝 두 자리 정수 값을 입력하세요.
+첫번째 정수:
+2
+두번째 정수:
+9
+print(array[2:9])
+-----------------
+[7,6,4,1,6,1,7]
+
+
+-------답안---------
+package sec01.ex1;
+
+import java.util.Scanner;
+
+class AR {
+
+	static int[] array;
+	static int len = 0;
+	static int num;
+	static int len_1st;
+	static int len_2nd;
+	static int space;
+
+	static void press() throws Exception {
+		System.out.println("1.스페이바를 눌러 배열의 길이를 정하세요(눌린 횟수만큼 배열의 길이)");
+		System.out.println("2.길이를 정했으면 엔터를 눌러주세요.");
+		while (true) {
+			space = System.in.read();
+
+			if (space == 32) {
+				len++;
+			} else {
+				break;
+			}
+		}
+	}
+
+	static int random() {
+		num = (int) (Math.random() * 10) + 1;
+		return num;
+	}
+
+	static int[] array_len() {
+		array = new int[len];
+		return array;
+	}
+
+	static int[] array() {
+		for (int i = 0; i < len; i++) {
+			array[i] = random();
+		}
+		return array;
+	}
+
+	static void array_all() throws Exception {
+		press();
+		System.out.print("배열의 길이는 " + AR.len + "입니다.");
+		System.out.println();
+		System.out.print("array=[");
+		array_len();
+		array();
+		for (int i = 0; i < len; i++) {
+			if (i == len - 1) {
+				System.out.print(array[i]);
+				break;
+			}
+			System.out.print(array[i] + ",");
+		}
+		System.out.print("]");
+		System.out.println();
+	}
+
+	static void array_section() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("1.배열 전체 범위 중 출력하고 싶은 구간에 해당하는 시작과 끝 두 자리 정수 값을 입력하세요.");
+		System.out.println("첫번째 정수:");
+		len_1st = sc.nextInt();
+		System.out.println("두번째 정수:");
+		len_2nd = sc.nextInt();
+		System.out.print("print(array[" +len_1st + ":" +len_2nd + "])");
+		System.out.println();
+		System.out.println("-----------------");
+		System.out.print("[");
+		for (int j = len_1st; j < len_2nd; j++) {
+			if (j == len_2nd - 1) {
+				System.out.print(array[j]);
+				break;
+			}
+			System.out.print(array[j] + ",");
+		}
+		System.out.print("]");
+		System.out.println();
+	}
+}
+
+
+public class array_test {
+
+	public static void main(String[] args) throws Exception {
+		AR.array_all();
+		AR.array_section();
+
+	}
+}
+
+        </pre>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="sidebar">
+      목록
+      <ol>
+        <li><a href="#index 1">자바 소개</a></li>
+        <li><a href="#index 2">형 변환</a></li>
+        <a href="#index 10">강제타입 변환</a><br>
+        <a href="#index 11">키코드</a>
+        <li><a href="#index 3">입출력</li>
+        <li><a href="#index 4">연산자</a></li>
+        <li><a href="#index 5">if, switch문</a></li>
+        <li><a href="#index 6">for, while문</a></li>
+        <li><a href="#index 7">참조 타입</a></li>
+        <li><a href="#index 8">클래스</a></li>
+        <li><a href="#index 9">상속</a></li>
+        <li><a href="#index 12">개인퀴즈</a></li>
+        <li><a href="#index 13">추상클래스</a></li>
+        <li><a href="#index 14">인터페이스</a></li>
+        <li><a href="#index 15">중첩클래스</a></li>
+        <li><a href="#index 16">익명객체</a></li>
+        <li><a href="#index 17">예외</a></li>
+        <li><a href="#index 18">java.lang패키지</a></li>
+        <li><a href="#index 20">Thread</a></li>
+        <li><a href="#index 19">컬렉션 프레임워크</a></li>
+        <li><a href="#index 21">입출력 스트림</a></li>
+        <li><a href="#index 22">코딩테스트</a></li>
+        <li><a href="#index 23">비트연산자</a></li>
+        <li><a href="#index 24">자바 유용한 메서드</a></li>
+      </ol>
+    </div>
+
+    <div id="footer">
+      다른 월드로 &nbsp;:&nbsp;
+      <a href="01_html5.html">HTML5 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="02_css3.html">CSS3 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="03_javaScript.html">자바스크립트 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="04_파이썬.html">파이썬 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="05_java.html">자바 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="06_라즈베리파이4.html">라즈베리파이4 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a href="07.web_scraping.html">웹 스크래핑 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+    </div>
+  </div>
+</body>
+
+</html>
